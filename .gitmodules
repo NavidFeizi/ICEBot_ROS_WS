@@ -1,3 +1,6 @@
 [submodule "src/emtracker_2"]
 	path = src/emtracker_2
 	url = https://github.com/NavidFeizi/Aurora_EMT_ROS_WS
+[submodule "src/emtracker_node"]
+	path = src/emtracker_node
+	url = https://github.com/NavidFeizi/emtracker_node
