@@ -1,0 +1,31 @@
+master:
+  node_id: 7
+  sync_period: 5000 # [us]    for catheter CSTAR robot do not go below 1500[us]
+
+slave_1:
+  dcf: "mc5004.eds"
+  node_id: 1
+
+slave_2:
+  dcf: "mc5004.eds"
+  node_id: 2
+
+slave_3:
+  dcf: "mclm3001.eds"
+  node_id: 3
+
+slave_4:
+  dcf: "mclm3001.eds"
+  node_id: 4
+
+slave_5:
+  dcf: "mclm3001.eds"
+  node_id: 5
+
+slave_6:
+  dcf: "mclm3001.eds"
+  node_id: 6
+
+
+
+  

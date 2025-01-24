@@ -1,0 +1,41 @@
+CombinedKoopman_withAux_withInput(
+  (encoder): MLP(
+    (input_layer): Linear(in_features=4, out_features=128, bias=True)
+    (hidden_layers): ModuleList(
+      (0-2): 3 x Linear(in_features=128, out_features=128, bias=True)
+    )
+    (output_layer): Linear(in_features=128, out_features=2, bias=True)
+    (act): ReLU()
+  )
+  (states_auxiliary): States_Auxiliary(
+    (net): ModuleList(
+      (0): MLP(
+        (input_layer): Linear(in_features=1, out_features=128, bias=True)
+        (hidden_layers): ModuleList(
+          (0-2): 3 x Linear(in_features=128, out_features=128, bias=True)
+        )
+        (output_layer): Linear(in_features=128, out_features=2, bias=True)
+        (act): ReLU()
+      )
+    )
+  )
+  (koopman): TrainableKoopmanDynamics()
+  (decoder): MLP(
+    (input_layer): Linear(in_features=2, out_features=128, bias=True)
+    (hidden_layers): ModuleList(
+      (0-2): 3 x Linear(in_features=128, out_features=128, bias=True)
+    )
+    (output_layer): Linear(in_features=128, out_features=4, bias=True)
+    (act): ReLU()
+  )
+  (inputs_auxiliary): Input_Auxiliary(
+    (model): MLP(
+      (input_layer): Linear(in_features=2, out_features=128, bias=True)
+      (hidden_layers): ModuleList(
+        (0-2): 3 x Linear(in_features=128, out_features=128, bias=True)
+      )
+      (output_layer): Linear(in_features=128, out_features=2, bias=True)
+      (act): ReLU()
+    )
+  )
+)

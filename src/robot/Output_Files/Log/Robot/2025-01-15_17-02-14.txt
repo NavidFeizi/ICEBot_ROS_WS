@@ -1,0 +1,1065 @@
+[2025-01-15 17:02:14.447] [ICEBot] [debug] [Node 1] Controller brand: "Faulhaber" - Operation layer:  CiA301 - PPU: 1000000.000000 - Gear ratio: 1.000000 - Encoder resoluton: 1000000.000000
+[2025-01-15 17:02:14.447] [ICEBot] [debug] [Node 2] Controller brand: "Faulhaber" - Operation layer:  CiA301 - PPU: 572.957795 - Gear ratio: 1.000000 - Encoder resoluton: 572.957795
+[2025-01-15 17:02:14.447] [ICEBot] [debug] [Node 5] Controller brand: Faulhaber - Operation layer:  Faulhaber Command - PPU: 166666.666667 - Gear ratio: 0.018000 - Encoder resoluton: 3000.000000
+[2025-01-15 17:02:14.447] [ICEBot] [debug] [Node 6] Controller brand: Faulhaber - Operation layer:  Faulhaber Command - PPU: 166666.666667 - Gear ratio: 0.018000 - Encoder resoluton: 3000.000000
+[2025-01-15 17:02:14.447] [ICEBot] [debug] [Node 4] Controller brand: Faulhaber - Operation layer:  Faulhaber Command - PPU: 166666.666667 - Gear ratio: 0.018000 - Encoder resoluton: 3000.000000
+[2025-01-15 17:02:14.447] [ICEBot] [debug] [Node 3] Controller brand: Faulhaber - Operation layer:  Faulhaber Command - PPU: 166666.666667 - Gear ratio: 0.018000 - Encoder resoluton: 3000.000000
+[2025-01-15 17:02:14.477] [ICEBot] [debug] [Node 3] Configing
+[2025-01-15 17:02:14.478] [ICEBot] [debug] [Node 4] Configing
+[2025-01-15 17:02:14.478] [ICEBot] [debug] [Node 5] Configing
+[2025-01-15 17:02:14.478] [ICEBot] [debug] [Node 6] Configing
+[2025-01-15 17:02:14.516] [ICEBot] [debug] [Node 1] Configing
+[2025-01-15 17:02:14.516] [ICEBot] [debug] [Node 2] Configing
+[2025-01-15 17:02:14.527] [ICEBot] [debug] [Node 3] Booted successfully.
+[2025-01-15 17:02:14.528] [ICEBot] [debug] [Node 4] Booted successfully.
+[2025-01-15 17:02:14.528] [ICEBot] [debug] [Node 5] Booted successfully.
+[2025-01-15 17:02:14.528] [ICEBot] [debug] [Node 6] Booted successfully.
+[2025-01-15 17:02:14.566] [ICEBot] [debug] [Node 1] Booted successfully.
+[2025-01-15 17:02:14.566] [ICEBot] [debug] [Node 2] Booted successfully.
+[2025-01-15 17:02:14.566] [ICEBot] [info] [Master] Nodes Booted Successfully
+[2025-01-15 17:02:14.577] [ICEBot] [debug] [Node 3] No fault to reset
+[2025-01-15 17:02:14.578] [ICEBot] [debug] [Node 4] No fault to reset
+[2025-01-15 17:02:14.579] [ICEBot] [debug] [Node 5] No fault to reset
+[2025-01-15 17:02:14.579] [ICEBot] [debug] [Node 6] No fault to reset
+[2025-01-15 17:02:14.616] [ICEBot] [debug] [Node 1] No fault to reset
+[2025-01-15 17:02:14.616] [ICEBot] [debug] [Node 2] No fault to reset
+[2025-01-15 17:02:14.782] [ICEBot] [debug] [Node 3] Switch on disabled  =>  Ready to Switch On  =>  Switched On
+[2025-01-15 17:02:14.783] [ICEBot] [debug] [Node 4] Switch on disabled  =>  Ready to Switch On  =>  Switched On
+[2025-01-15 17:02:14.783] [ICEBot] [debug] [Node 5] Switch on disabled  =>  Ready to Switch On  =>  Switched On
+[2025-01-15 17:02:14.784] [ICEBot] [debug] [Node 6] Switch on disabled  =>  Ready to Switch On  =>  Switched On
+[2025-01-15 17:02:14.819] [ICEBot] [debug] [Node 1] Switch on disabled  =>  Ready to Switch On  =>  Switched On
+[2025-01-15 17:02:14.819] [ICEBot] [debug] [Node 2] Switch on disabled  =>  Ready to Switch On  =>  Switched On
+[2025-01-15 17:02:14.827] [ICEBot] [info] [Master] All Nodes Switched ON
+[2025-01-15 17:02:14.882] [ICEBot] [debug] [Node 3] Setting mode of operation to -1
+[2025-01-15 17:02:14.883] [ICEBot] [debug] [Node 3] Mode of operation = -1
+[2025-01-15 17:02:14.883] [ICEBot] [debug] [Node 4] Setting mode of operation to -1
+[2025-01-15 17:02:14.883] [ICEBot] [debug] [Node 5] Setting mode of operation to -1
+[2025-01-15 17:02:14.884] [ICEBot] [debug] [Node 6] Setting mode of operation to -1
+[2025-01-15 17:02:14.884] [ICEBot] [debug] [Node 4] Mode of operation = -1
+[2025-01-15 17:02:14.885] [ICEBot] [debug] [Node 5] Mode of operation = -1
+[2025-01-15 17:02:14.886] [ICEBot] [debug] [Node 6] Mode of operation = -1
+[2025-01-15 17:02:14.919] [ICEBot] [debug] [Node 1] Setting mode of operation to 3
+[2025-01-15 17:02:14.919] [ICEBot] [debug] [Node 2] Setting mode of operation to 3
+[2025-01-15 17:02:15.383] [ICEBot] [debug] [Node 3] Setting profile position parameters to: ACC: 2604 [0.01mm/s^2] or [0.1deg/s^2]  |  DCC: 2604 [0.01mm/s^2] or [0.1deg/s^2]  |  Vel: 2604 [0.01mm/s] or [0.1deg/s]  
+[2025-01-15 17:02:15.384] [ICEBot] [debug] [Node 4] Setting profile position parameters to: ACC: 2604 [0.01mm/s^2] or [0.1deg/s^2]  |  DCC: 2604 [0.01mm/s^2] or [0.1deg/s^2]  |  Vel: 2604 [0.01mm/s] or [0.1deg/s]  
+[2025-01-15 17:02:15.385] [ICEBot] [debug] [Node 5] Setting profile position parameters to: ACC: 2604 [0.01mm/s^2] or [0.1deg/s^2]  |  DCC: 2604 [0.01mm/s^2] or [0.1deg/s^2]  |  Vel: 2604 [0.01mm/s] or [0.1deg/s]  
+[2025-01-15 17:02:15.386] [ICEBot] [debug] [Node 6] Setting profile position parameters to: ACC: 2604 [0.01mm/s^2] or [0.1deg/s^2]  |  DCC: 2604 [0.01mm/s^2] or [0.1deg/s^2]  |  Vel: 2604 [0.01mm/s] or [0.1deg/s]  
+[2025-01-15 17:02:15.421] [ICEBot] [debug] [Node 1] Mode of operation = 3
+[2025-01-15 17:02:15.421] [ICEBot] [debug] [Node 2] Mode of operation = 3
+[2025-01-15 17:02:15.503] [ICEBot] [debug] [Node 3] FaulhaberTraceConfig
+[2025-01-15 17:02:15.504] [ICEBot] [debug] [Node 4] FaulhaberTraceConfig
+[2025-01-15 17:02:15.505] [ICEBot] [debug] [Node 5] FaulhaberTraceConfig
+[2025-01-15 17:02:15.506] [ICEBot] [debug] [Node 6] FaulhaberTraceConfig
+[2025-01-15 17:02:15.554] [ICEBot] [debug] [Node 3] Setting TPDO1 transmission type to 0
+[2025-01-15 17:02:15.555] [ICEBot] [debug] [Node 4] Setting TPDO1 transmission type to 0
+[2025-01-15 17:02:15.556] [ICEBot] [debug] [Node 5] Setting TPDO1 transmission type to 0
+[2025-01-15 17:02:15.556] [ICEBot] [debug] [Node 6] Setting TPDO1 transmission type to 0
+[2025-01-15 17:02:15.605] [ICEBot] [debug] [Node 3] Setting TPDO2 transmission type to 1
+[2025-01-15 17:02:15.606] [ICEBot] [debug] [Node 4] Setting TPDO2 transmission type to 1
+[2025-01-15 17:02:15.606] [ICEBot] [debug] [Node 5] Setting TPDO2 transmission type to 1
+[2025-01-15 17:02:15.607] [ICEBot] [debug] [Node 6] Setting TPDO2 transmission type to 1
+[2025-01-15 17:02:15.656] [ICEBot] [debug] [Node 3] Setting TPDO3 transmission type to 1
+[2025-01-15 17:02:15.656] [ICEBot] [debug] [Node 4] Setting TPDO3 transmission type to 1
+[2025-01-15 17:02:15.657] [ICEBot] [debug] [Node 5] Setting TPDO3 transmission type to 1
+[2025-01-15 17:02:15.657] [ICEBot] [debug] [Node 6] Setting TPDO3 transmission type to 1
+[2025-01-15 17:02:15.717] [ICEBot] [debug] [Node 3] Operation enabled
+[2025-01-15 17:02:15.718] [ICEBot] [debug] [Node 4] Operation enabled
+[2025-01-15 17:02:15.719] [ICEBot] [debug] [Node 5] Operation enabled
+[2025-01-15 17:02:15.719] [ICEBot] [debug] [Node 6] Operation enabled
+[2025-01-15 17:02:15.921] [ICEBot] [debug] [Node 1: Setting profile position parameters to: ACC: 500 [0.01mm/s^2] or [0.1deg/s^2]  |  DCC: 500 [0.01mm/s^2] or [0.1deg/s^2]  |  Vel: 2000 [0.01mm/s] or [0.1deg/s]  
+[2025-01-15 17:02:15.921] [ICEBot] [debug] [Node 2: Setting profile position parameters to: ACC: 572 [0.01mm/s^2] or [0.1deg/s^2]  |  DCC: 572 [0.01mm/s^2] or [0.1deg/s^2]  |  Vel: 1145 [0.01mm/s] or [0.1deg/s]  
+[2025-01-15 17:02:16.123] [ICEBot] [debug] [Node 1] Setting TPDO1 transmission type to 1
+[2025-01-15 17:02:16.123] [ICEBot] [debug] [Node 2] Setting TPDO1 transmission type to 1
+[2025-01-15 17:02:16.173] [ICEBot] [debug] [Node 1] Setting TPDO2 transmission type to 1
+[2025-01-15 17:02:16.174] [ICEBot] [debug] [Node 2] Setting TPDO2 transmission type to 1
+[2025-01-15 17:02:16.223] [ICEBot] [debug] [Node 1] Encoder memory = 0.000000
+[2025-01-15 17:02:16.224] [ICEBot] [debug] [Node 2] Encoder memory = 0.000000
+[2025-01-15 17:02:16.724] [ICEBot] [debug] [Node 1] Setting encoder value...
+[2025-01-15 17:02:16.724] [ICEBot] [debug] [Node 2] Setting encoder value...
+[2025-01-15 17:02:16.724] [ICEBot] [warning] [Node 1] request to disable - alraedy disabled
+[2025-01-15 17:02:16.724] [ICEBot] [warning] [Node 2] request to disable - alraedy disabled
+[2025-01-15 17:02:17.224] [ICEBot] [debug] [Node 1] Setting mode of operation to 6
+[2025-01-15 17:02:17.224] [ICEBot] [debug] [Node 2] Setting mode of operation to 6
+[2025-01-15 17:02:17.726] [ICEBot] [debug] [Node 1] Mode of operation = 6
+[2025-01-15 17:02:17.727] [ICEBot] [debug] [Node 2] Mode of operation = 6
+[2025-01-15 17:02:18.238] [ICEBot] [debug] [Node 1] Operation enabled
+[2025-01-15 17:02:18.239] [ICEBot] [debug] [Node 2] Operation enabled
+[2025-01-15 17:02:18.748] [ICEBot] [info] [Master] All Nodes Enabled
+[2025-01-15 17:02:18.761] [ICEBot] [debug] [Node 1] encoder set value: 0.000000 | pulse count: 0
+[2025-01-15 17:02:18.762] [ICEBot] [debug] [Node 2] encoder set value: 0.000000 | pulse count: 0
+[2025-01-15 17:02:19.268] [ICEBot] [debug] [Node 3] Task posted
+[2025-01-15 17:02:19.269] [ICEBot] [debug] [Node 4] Task posted
+[2025-01-15 17:02:19.269] [ICEBot] [debug] [Node 5] Task posted
+[2025-01-15 17:02:19.270] [ICEBot] [debug] [Node 6] Task posted
+[2025-01-15 17:02:19.272] [ICEBot] [debug] [Node 1] enable: 1: bit10: 1: bit12: 1: bit13: 0
+[2025-01-15 17:02:19.272] [ICEBot] [debug] [Node 2] enable: 1: bit10: 1: bit12: 1: bit13: 0
+[2025-01-15 17:02:19.272] [ICEBot] [debug] [Node 1] Current position set to 0.000000
+[2025-01-15 17:02:19.273] [ICEBot] [debug] [Node 2] Current position set to 0.000000
+[2025-01-15 17:02:19.784] [ICEBot] [debug] [Node 1] Switched On
+[2025-01-15 17:02:19.784] [ICEBot] [debug] [Node 1] Setting mode of operation to 3
+[2025-01-15 17:02:19.784] [ICEBot] [debug] [Node 2] Switched On
+[2025-01-15 17:02:19.784] [ICEBot] [debug] [Node 2] Setting mode of operation to 3
+[2025-01-15 17:02:20.283] [ICEBot] [info] [Master] At Least One Node Disabled
+[2025-01-15 17:02:20.286] [ICEBot] [debug] [Node 1] Mode of operation = 3
+[2025-01-15 17:02:20.287] [ICEBot] [debug] [Node 2] Mode of operation = 3
+[2025-01-15 17:02:21.298] [ICEBot] [debug] [Node 1] Operation enabled
+[2025-01-15 17:02:21.299] [ICEBot] [debug] [Node 2] Operation enabled
+[2025-01-15 17:02:21.798] [ICEBot] [info] [Master] All Nodes Enabled
+[2025-01-15 17:02:22.298] [ICEBot] [debug] [Node 1] Task posted
+[2025-01-15 17:02:22.299] [ICEBot] [debug] [Node 2] Task posted
+[2025-01-15 17:02:22.303] [ICEBot] [info] [Master] Tasks Posted
+[2025-01-15 17:04:00.440] [ICEBot] [info] [Master] Setting zero position
+[2025-01-15 17:04:00.440] [ICEBot] [debug] [Node 1] Setting encoder value...
+[2025-01-15 17:04:00.440] [ICEBot] [debug] [Node 2] Setting encoder value...
+[2025-01-15 17:04:00.447] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.447] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.452] [ICEBot] [debug] [Node 1] Switched On
+[2025-01-15 17:04:00.453] [ICEBot] [debug] [Node 2] Switched On
+[2025-01-15 17:04:00.457] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.457] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.467] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.467] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.478] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.478] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.488] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.488] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.498] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.498] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.508] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.508] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.518] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.518] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.528] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.528] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.538] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.538] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.548] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.548] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.558] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.558] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.568] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.568] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.578] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.578] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.588] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.588] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.598] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.598] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.608] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.608] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.618] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.618] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.628] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.628] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.638] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.638] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.648] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.648] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.658] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.658] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.668] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.668] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.678] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.678] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.688] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.688] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.698] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.698] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.708] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.708] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.718] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.718] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.728] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.728] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.738] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.738] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.748] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.749] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.759] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.759] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.769] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.769] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.779] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.779] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.789] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.789] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.799] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.799] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.809] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.809] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.819] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.819] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.829] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.829] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.839] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.839] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.849] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.849] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.859] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.859] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.869] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.869] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.879] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.879] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.889] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.889] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.899] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.899] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.909] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.909] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.919] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.919] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.929] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.929] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.939] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.939] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.948] [ICEBot] [info] [Master] At Least One Node Disabled
+[2025-01-15 17:04:00.949] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.949] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.952] [ICEBot] [debug] [Node 1] Setting mode of operation to 6
+[2025-01-15 17:04:00.953] [ICEBot] [debug] [Node 2] Setting mode of operation to 6
+[2025-01-15 17:04:00.959] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.959] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.969] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.969] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.979] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.979] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.989] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.989] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:00.999] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:00.999] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.009] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.009] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.019] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.019] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.029] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.030] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.040] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.040] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.050] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.050] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.060] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.060] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.070] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.070] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.080] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.080] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.090] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.090] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.100] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.100] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.110] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.110] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.120] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.120] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.130] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.130] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.140] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.140] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.150] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.150] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.160] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.160] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.170] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.170] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.180] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.180] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.190] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.190] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.200] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.200] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.210] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.210] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.220] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.220] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.230] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.230] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.240] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.240] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.250] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.250] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.260] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.260] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.270] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.270] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.280] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.280] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.290] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.290] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.300] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.300] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.310] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.310] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.320] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.320] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.330] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.330] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.340] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.340] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.350] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.351] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.361] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.361] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.371] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.371] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.381] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.381] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.391] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.391] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.401] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.401] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.411] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.411] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.421] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.421] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.431] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.431] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.441] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.441] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.451] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.451] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.453] [ICEBot] [debug] [Node 1] Mode of operation = 6
+[2025-01-15 17:04:01.454] [ICEBot] [debug] [Node 2] Mode of operation = 6
+[2025-01-15 17:04:01.461] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.461] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.471] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.471] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.481] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.481] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.491] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.491] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.501] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.501] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.511] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.511] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.521] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.521] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.531] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.531] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.541] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.541] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.551] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.551] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.561] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.561] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.571] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.571] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.581] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.581] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.591] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.591] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.601] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.601] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.611] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.611] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.621] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.621] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.631] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.631] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.641] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.641] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.651] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.651] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.661] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.661] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.671] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.671] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.681] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.681] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.691] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.691] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.701] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.701] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.711] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.711] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.721] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.721] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.731] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.731] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.741] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.741] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.751] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.752] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.762] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.762] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.772] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.772] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.782] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.782] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.792] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.792] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.802] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.802] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.812] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.812] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.822] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.822] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.832] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.832] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.842] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.842] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.852] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.852] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.862] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.862] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.872] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.872] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.882] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.882] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.892] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.892] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.902] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.902] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.912] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.912] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.922] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.922] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.932] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.932] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.942] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.942] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.952] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.952] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.962] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.962] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.967] [ICEBot] [debug] [Node 1] Operation enabled
+[2025-01-15 17:04:01.967] [ICEBot] [debug] [Node 2] Operation enabled
+[2025-01-15 17:04:01.972] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.972] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.982] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.982] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:01.992] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:01.992] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.002] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.002] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.012] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.012] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.022] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.022] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.032] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.032] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.042] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.042] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.052] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.052] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.062] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.062] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.072] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.072] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.083] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.083] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.093] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.093] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.103] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.103] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.113] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.113] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.123] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.123] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.133] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.133] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.143] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.143] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.153] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.153] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.163] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.163] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.173] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.173] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.183] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.183] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.193] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.193] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.203] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.203] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.213] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.213] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.223] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.223] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.233] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.233] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.243] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.243] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.253] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.253] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.263] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.263] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.273] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.273] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.283] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.284] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.294] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.294] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.304] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.304] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.314] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.314] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.324] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.324] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.334] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.334] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.344] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.344] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.354] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.354] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.364] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.364] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.374] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.374] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.384] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.384] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.394] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.394] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.404] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.404] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.414] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.414] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.424] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.424] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.434] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.434] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.444] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.444] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.454] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.454] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.464] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.464] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.474] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.474] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.475] [ICEBot] [info] [Master] All Nodes Enabled
+[2025-01-15 17:04:02.484] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.484] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.488] [ICEBot] [debug] [Node 1] encoder set value: 0.000000 | pulse count: 0
+[2025-01-15 17:04:02.489] [ICEBot] [debug] [Node 2] encoder set value: 0.000000 | pulse count: 0
+[2025-01-15 17:04:02.494] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.494] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.504] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.504] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.514] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.514] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.524] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.524] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.534] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.534] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.544] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.544] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.554] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.554] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.564] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.564] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.574] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.574] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.584] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.584] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.594] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.594] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.604] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.604] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.614] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.614] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.624] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.624] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.634] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.634] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.644] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.644] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.654] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.654] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.665] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.665] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.675] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.675] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.685] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.685] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.695] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.695] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.705] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.705] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.715] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.715] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.725] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.725] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.735] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.735] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.745] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.745] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.755] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.755] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.765] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.765] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.775] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.775] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.785] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.785] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.795] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.795] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.805] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.805] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.815] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.815] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.825] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.825] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.835] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.835] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.845] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.845] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.855] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.855] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.865] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.865] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.875] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.875] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.885] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.885] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.895] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.895] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.905] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.905] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.915] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.915] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.925] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.925] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.935] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.935] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.945] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.945] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.955] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.955] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.965] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.965] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.976] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.976] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.986] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.986] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.996] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:02.996] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:02.999] [ICEBot] [debug] [Node 1] enable: 1: bit10: 1: bit12: 1: bit13: 0
+[2025-01-15 17:04:02.999] [ICEBot] [debug] [Node 2] enable: 1: bit10: 1: bit12: 1: bit13: 0
+[2025-01-15 17:04:02.999] [ICEBot] [debug] [Node 1] Current position set to 0.000000
+[2025-01-15 17:04:03.000] [ICEBot] [debug] [Node 2] Current position set to 0.000000
+[2025-01-15 17:04:03.006] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.006] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.016] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.016] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.026] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.026] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.036] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.036] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.046] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.046] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.056] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.056] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.066] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.066] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.076] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.076] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.086] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.086] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.096] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.096] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.106] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.106] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.116] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.116] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.126] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.126] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.136] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.136] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.146] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.146] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.156] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.156] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.166] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.166] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.176] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.176] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.186] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.186] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.196] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.196] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.206] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.206] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.216] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.216] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.226] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.226] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.236] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.236] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.246] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.246] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.256] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.256] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.266] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.266] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.276] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.276] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.286] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.286] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.296] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.296] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.306] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.306] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.316] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.316] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.326] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.326] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.336] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.336] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.346] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.346] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.356] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.356] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.366] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.366] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.376] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.376] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.386] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.386] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.396] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.396] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.406] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.407] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.417] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.417] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.427] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.427] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.437] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.437] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.447] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.447] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.457] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.457] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.467] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.467] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.477] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.477] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.487] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.487] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.497] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.497] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.507] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.507] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.514] [ICEBot] [debug] [Node 1] Switched On
+[2025-01-15 17:04:03.514] [ICEBot] [debug] [Node 1] Setting mode of operation to 3
+[2025-01-15 17:04:03.514] [ICEBot] [debug] [Node 2] Switched On
+[2025-01-15 17:04:03.514] [ICEBot] [debug] [Node 2] Setting mode of operation to 3
+[2025-01-15 17:04:03.517] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.517] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.527] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.527] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.537] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.537] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.547] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.547] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.557] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.557] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.567] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.567] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.577] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.577] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.587] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.587] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.597] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.597] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.607] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.607] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.617] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.617] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.627] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.627] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.637] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.637] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.647] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.647] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.657] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.657] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.667] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.667] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.677] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.677] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.687] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.687] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.697] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.697] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.707] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.707] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.717] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.717] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.727] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.727] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.737] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.737] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.747] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.747] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.757] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.757] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.767] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.767] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.777] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.777] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.787] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.787] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.797] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.797] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.807] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.808] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.818] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.818] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.828] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.828] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.838] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.838] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.848] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.848] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.858] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.858] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.868] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.868] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.878] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.878] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.888] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.888] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.898] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.898] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.908] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.908] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.918] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.918] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.928] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.928] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.938] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.938] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.948] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.948] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.958] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.958] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.968] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.968] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.978] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.978] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.988] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.988] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:03.998] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:03.998] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.008] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.008] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.018] [ICEBot] [debug] [Node 1] Mode of operation = 3
+[2025-01-15 17:04:04.018] [ICEBot] [debug] [Node 2] Mode of operation = 3
+[2025-01-15 17:04:04.018] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.018] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.021] [ICEBot] [info] [Master] At Least One Node Disabled
+[2025-01-15 17:04:04.028] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.028] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.038] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.038] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.048] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.048] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.058] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.058] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.068] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.068] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.078] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.078] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.088] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.088] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.098] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.098] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.108] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.108] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.118] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.118] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.128] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.128] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.138] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.138] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.148] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.148] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.158] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.159] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.169] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.169] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.179] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.179] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.189] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.189] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.199] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.199] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.209] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.209] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.219] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.219] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.229] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.229] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.239] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.239] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.249] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.249] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.259] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.259] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.269] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.269] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.279] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.279] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.289] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.289] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.299] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.299] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.309] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.309] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.319] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.319] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.329] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.329] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.339] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.339] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.349] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.349] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.359] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.359] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.369] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.369] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.379] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.379] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.389] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.389] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.399] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.399] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.409] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.409] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.419] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.419] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.429] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.429] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.439] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.439] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.449] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.449] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.459] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.459] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.469] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.469] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.480] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.480] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.490] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.490] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.500] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.500] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.510] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.510] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.520] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.520] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.530] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.530] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.540] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.540] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.550] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.550] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.560] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.560] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.570] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.570] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.580] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.580] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.590] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.590] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.600] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.600] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.610] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.610] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.620] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.620] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.630] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.630] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.640] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.640] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.650] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.650] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.660] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.660] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.670] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.670] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.680] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.680] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.690] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.690] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.700] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.700] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.710] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.710] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.720] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.720] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.730] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.730] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.740] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.740] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.750] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.750] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.760] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.760] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.771] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.771] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.781] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.781] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.791] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.791] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.801] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.801] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.811] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.811] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.821] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.821] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.831] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.831] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.841] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.841] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.851] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.851] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.861] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.861] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.871] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.871] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.881] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.881] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.891] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.891] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.901] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.901] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.911] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.911] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.921] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.921] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.931] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.931] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.941] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.941] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.951] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.951] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.961] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.961] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.971] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.971] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.981] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.981] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:04.991] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:04.991] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:05.001] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:05.001] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:05.011] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:05.012] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:05.022] [ICEBot] [debug] [Node 1] Robot is not operational
+[2025-01-15 17:04:05.022] [ICEBot] [debug] [Node 2] Robot is not operational
+[2025-01-15 17:04:05.029] [ICEBot] [debug] [Node 1] Operation enabled
+[2025-01-15 17:04:05.029] [ICEBot] [debug] [Node 2] Operation enabled
+[2025-01-15 17:04:05.526] [ICEBot] [info] [Master] All Nodes Enabled
+[2025-01-15 17:07:15.557] [ICEBot] [debug] [Node 1] Deconfiging
+[2025-01-15 17:07:15.557] [ICEBot] [debug] [Node 2] Deconfiging
+[2025-01-15 17:07:15.557] [ICEBot] [debug] [Node 3] Deconfiging
+[2025-01-15 17:07:15.557] [ICEBot] [debug] [Node 4] Deconfiging
+[2025-01-15 17:07:15.557] [ICEBot] [debug] [Node 5] Deconfiging
+[2025-01-15 17:07:15.557] [ICEBot] [debug] [Node 6] Deconfiging
+[2025-01-15 17:07:15.609] [ICEBot] [debug] [Node 1] Switch on disabled
+[2025-01-15 17:07:15.609] [ICEBot] [debug] [Node 2] Switch on disabled
+[2025-01-15 17:07:15.611] [ICEBot] [debug] [Node 3] Switch on disabled
+[2025-01-15 17:07:15.611] [ICEBot] [debug] [Node 4] Switch on disabled
+[2025-01-15 17:07:15.612] [ICEBot] [debug] [Node 5] Switch on disabled
+[2025-01-15 17:07:15.612] [ICEBot] [debug] [Node 6] Switch on disabled
