@@ -73,8 +73,8 @@ CiA301Node::CiA301Node(ev_exec_t * /*exec*/,
     if (m_controller_brand == "Maxon" || m_controller_brand == "Faulhaber")
     {
         m_conversion_factor = (m_controller_brand == "Maxon") ? (60.0 / m_gear_ratio) : (m_ppu / VelocityFactor);
-        m_profile_vel = static_cast<unsigned int>(ProfileVelSI * m_conversion_factor);
-        m_profile_acc = static_cast<unsigned int>(ProfileAccSI * m_conversion_factor);
+        m_profile_vel = static_cast<unsigned int>(abs(ProfileVelSI * m_conversion_factor));
+        m_profile_acc = static_cast<unsigned int>(abs(ProfileAccSI * m_conversion_factor));
     }
     else
     {
@@ -305,6 +305,8 @@ void CiA301Node::OnRpdoWrite(uint16_t idx, uint8_t subidx) noexcept
 /* */
 void CiA301Node::OnSync(uint8_t cnt, const time_point &t) noexcept
 {
+    (void) cnt;
+    (void) t;
     // Send the scaled_position_command to the slave's object dictionary entry 0x6064.
     try
     {
@@ -416,6 +418,7 @@ void CiA301Node::EnableOperation(const bool enable)
 // ********************** this function is under development **********************
 void CiA301Node::EnableOperationWithPdo(const bool enable)
 {
+    (void) enable;
     // using TPDO1
     // m_control_word.enable_operation = 1;
     // tpdo_mapped[CONTROL_WORD_IDX][0] = m_control_word.get(); // enable

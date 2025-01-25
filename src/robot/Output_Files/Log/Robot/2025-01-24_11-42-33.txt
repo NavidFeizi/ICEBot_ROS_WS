@@ -83,3 +83,15 @@
 [2025-01-24 11:42:36.612] [ICEBot] [debug] [Node 1] Task posted
 [2025-01-24 11:42:36.614] [ICEBot] [info] [Master] Tasks Posted
 [2025-01-24 11:43:20.680] [ICEBot] [info] [Master] Setting soft home done
+[2025-01-24 17:07:56.296] [ICEBot] [debug] [Node 1] Deconfiging
+[2025-01-24 17:07:56.296] [ICEBot] [debug] [Node 2] Deconfiging
+[2025-01-24 17:07:56.296] [ICEBot] [debug] [Node 3] Deconfiging
+[2025-01-24 17:07:56.296] [ICEBot] [debug] [Node 4] Deconfiging
+[2025-01-24 17:07:56.296] [ICEBot] [debug] [Node 6] Deconfiging
+[2025-01-24 17:07:56.296] [ICEBot] [debug] [Node 5] Deconfiging
+[2025-01-24 17:07:56.347] [ICEBot] [debug] [Node 1] Switch on disabled
+[2025-01-24 17:07:56.348] [ICEBot] [debug] [Node 2] Switch on disabled
+[2025-01-24 17:07:56.348] [ICEBot] [debug] [Node 3] Switch on disabled
+[2025-01-24 17:07:56.349] [ICEBot] [debug] [Node 4] Switch on disabled
+[2025-01-24 17:07:56.349] [ICEBot] [debug] [Node 6] Switch on disabled
+[2025-01-24 17:07:56.349] [ICEBot] [debug] [Node 5] Switch on disabled

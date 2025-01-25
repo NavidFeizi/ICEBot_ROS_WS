@@ -1,0 +1,97 @@
+[2025-01-24 17:49:43.085] [ICEBot] [debug] [Node 1] Controller brand: "Faulhaber" - Operation layer:  CiA301 - PPU: 1000000.000000 - Gear ratio: 1.000000 - Encoder resoluton: 1000000.000000
+[2025-01-24 17:49:43.085] [ICEBot] [debug] [Node 2] Controller brand: "Faulhaber" - Operation layer:  CiA301 - PPU: 572.957795 - Gear ratio: 1.000000 - Encoder resoluton: 572.957795
+[2025-01-24 17:49:43.085] [ICEBot] [debug] [Node 5] Controller brand: Faulhaber - Operation layer:  Faulhaber Command - PPU: 500000.000000 - Gear ratio: 0.006000 - Encoder resoluton: 3000.000000
+[2025-01-24 17:49:43.085] [ICEBot] [debug] [Node 6] Controller brand: Faulhaber - Operation layer:  Faulhaber Command - PPU: 500000.000000 - Gear ratio: 0.006000 - Encoder resoluton: 3000.000000
+[2025-01-24 17:49:43.085] [ICEBot] [debug] [Node 4] Controller brand: Faulhaber - Operation layer:  Faulhaber Command - PPU: 500000.000000 - Gear ratio: 0.006000 - Encoder resoluton: 3000.000000
+[2025-01-24 17:49:43.085] [ICEBot] [debug] [Node 3] Controller brand: Faulhaber - Operation layer:  Faulhaber Command - PPU: 500000.000000 - Gear ratio: 0.006000 - Encoder resoluton: 3000.000000
+[2025-01-24 17:49:43.116] [ICEBot] [debug] [Node 5] Configing
+[2025-01-24 17:49:43.116] [ICEBot] [debug] [Node 3] Configing
+[2025-01-24 17:49:43.116] [ICEBot] [debug] [Node 4] Configing
+[2025-01-24 17:49:43.116] [ICEBot] [debug] [Node 6] Configing
+[2025-01-24 17:49:43.153] [ICEBot] [debug] [Node 1] Configing
+[2025-01-24 17:49:43.154] [ICEBot] [debug] [Node 2] Configing
+[2025-01-24 17:49:43.166] [ICEBot] [debug] [Node 5] Booted successfully.
+[2025-01-24 17:49:43.166] [ICEBot] [debug] [Node 3] Booted successfully.
+[2025-01-24 17:49:43.166] [ICEBot] [debug] [Node 4] Booted successfully.
+[2025-01-24 17:49:43.166] [ICEBot] [debug] [Node 6] Booted successfully.
+[2025-01-24 17:49:43.204] [ICEBot] [debug] [Node 1] Booted successfully.
+[2025-01-24 17:49:43.204] [ICEBot] [debug] [Node 2] Booted successfully.
+[2025-01-24 17:49:43.204] [ICEBot] [info] [Master] Nodes Booted Successfully
+[2025-01-24 17:49:43.216] [ICEBot] [debug] [Node 5] No fault to reset
+[2025-01-24 17:49:43.216] [ICEBot] [debug] [Node 3] No fault to reset
+[2025-01-24 17:49:43.217] [ICEBot] [debug] [Node 6] No fault to reset
+[2025-01-24 17:49:43.217] [ICEBot] [debug] [Node 4] No fault to reset
+[2025-01-24 17:49:43.254] [ICEBot] [debug] [Node 1] No fault to reset
+[2025-01-24 17:49:43.255] [ICEBot] [debug] [Node 2] No fault to reset
+[2025-01-24 17:49:43.421] [ICEBot] [debug] [Node 3] Switch on disabled  =>  Ready to Switch On  =>  Switched On
+[2025-01-24 17:49:43.421] [ICEBot] [debug] [Node 5] Switch on disabled  =>  Ready to Switch On  =>  Switched On
+[2025-01-24 17:49:43.422] [ICEBot] [debug] [Node 6] Switch on disabled  =>  Ready to Switch On  =>  Switched On
+[2025-01-24 17:49:43.423] [ICEBot] [debug] [Node 4] Switch on disabled  =>  Ready to Switch On  =>  Switched On
+[2025-01-24 17:49:43.457] [ICEBot] [debug] [Node 1] Switch on disabled  =>  Ready to Switch On  =>  Switched On
+[2025-01-24 17:49:43.458] [ICEBot] [debug] [Node 2] Switch on disabled  =>  Ready to Switch On  =>  Switched On
+[2025-01-24 17:49:43.466] [ICEBot] [info] [Master] All Nodes Switched ON
+[2025-01-24 17:49:43.521] [ICEBot] [debug] [Node 3] Setting mode of operation to -1
+[2025-01-24 17:49:43.521] [ICEBot] [debug] [Node 5] Setting mode of operation to -1
+[2025-01-24 17:49:43.522] [ICEBot] [debug] [Node 6] Setting mode of operation to -1
+[2025-01-24 17:49:43.522] [ICEBot] [debug] [Node 3] Mode of operation = -1
+[2025-01-24 17:49:43.523] [ICEBot] [debug] [Node 4] Setting mode of operation to -1
+[2025-01-24 17:49:43.523] [ICEBot] [debug] [Node 5] Mode of operation = -1
+[2025-01-24 17:49:43.523] [ICEBot] [debug] [Node 6] Mode of operation = -1
+[2025-01-24 17:49:43.524] [ICEBot] [debug] [Node 4] Mode of operation = -1
+[2025-01-24 17:49:43.557] [ICEBot] [debug] [Node 1] Setting mode of operation to 3
+[2025-01-24 17:49:43.558] [ICEBot] [debug] [Node 2] Setting mode of operation to 3
+[2025-01-24 17:49:44.022] [ICEBot] [debug] [Node 3] Setting profile position parameters to: ACC: 7812 [0.01mm/s^2] or [0.1deg/s^2]  |  DCC: 7812 [0.01mm/s^2] or [0.1deg/s^2]  |  Vel: 7812 [0.01mm/s] or [0.1deg/s]  
+[2025-01-24 17:49:44.023] [ICEBot] [debug] [Node 5] Setting profile position parameters to: ACC: 7812 [0.01mm/s^2] or [0.1deg/s^2]  |  DCC: 7812 [0.01mm/s^2] or [0.1deg/s^2]  |  Vel: 7812 [0.01mm/s] or [0.1deg/s]  
+[2025-01-24 17:49:44.023] [ICEBot] [debug] [Node 6] Setting profile position parameters to: ACC: 7812 [0.01mm/s^2] or [0.1deg/s^2]  |  DCC: 7812 [0.01mm/s^2] or [0.1deg/s^2]  |  Vel: 7812 [0.01mm/s] or [0.1deg/s]  
+[2025-01-24 17:49:44.024] [ICEBot] [debug] [Node 4] Setting profile position parameters to: ACC: 7812 [0.01mm/s^2] or [0.1deg/s^2]  |  DCC: 7812 [0.01mm/s^2] or [0.1deg/s^2]  |  Vel: 7812 [0.01mm/s] or [0.1deg/s]  
+[2025-01-24 17:49:44.058] [ICEBot] [debug] [Node 1] Mode of operation = 3
+[2025-01-24 17:49:44.058] [ICEBot] [debug] [Node 2] Mode of operation = 3
+[2025-01-24 17:49:44.143] [ICEBot] [debug] [Node 3] FaulhaberTraceConfig
+[2025-01-24 17:49:44.143] [ICEBot] [debug] [Node 5] FaulhaberTraceConfig
+[2025-01-24 17:49:44.144] [ICEBot] [debug] [Node 6] FaulhaberTraceConfig
+[2025-01-24 17:49:44.144] [ICEBot] [debug] [Node 4] FaulhaberTraceConfig
+[2025-01-24 17:49:44.193] [ICEBot] [debug] [Node 3] Setting TPDO1 transmission type to 0
+[2025-01-24 17:49:44.194] [ICEBot] [debug] [Node 5] Setting TPDO1 transmission type to 0
+[2025-01-24 17:49:44.194] [ICEBot] [debug] [Node 6] Setting TPDO1 transmission type to 0
+[2025-01-24 17:49:44.195] [ICEBot] [debug] [Node 4] Setting TPDO1 transmission type to 0
+[2025-01-24 17:49:44.244] [ICEBot] [debug] [Node 3] Setting TPDO2 transmission type to 1
+[2025-01-24 17:49:44.244] [ICEBot] [debug] [Node 5] Setting TPDO2 transmission type to 1
+[2025-01-24 17:49:44.245] [ICEBot] [debug] [Node 6] Setting TPDO2 transmission type to 1
+[2025-01-24 17:49:44.245] [ICEBot] [debug] [Node 4] Setting TPDO2 transmission type to 1
+[2025-01-24 17:49:44.295] [ICEBot] [debug] [Node 3] Setting TPDO3 transmission type to 1
+[2025-01-24 17:49:44.295] [ICEBot] [debug] [Node 5] Setting TPDO3 transmission type to 1
+[2025-01-24 17:49:44.295] [ICEBot] [debug] [Node 6] Setting TPDO3 transmission type to 1
+[2025-01-24 17:49:44.297] [ICEBot] [debug] [Node 4] Setting TPDO3 transmission type to 1
+[2025-01-24 17:49:44.358] [ICEBot] [debug] [Node 3] Operation enabled
+[2025-01-24 17:49:44.358] [ICEBot] [debug] [Node 5] Operation enabled
+[2025-01-24 17:49:44.359] [ICEBot] [debug] [Node 6] Operation enabled
+[2025-01-24 17:49:44.359] [ICEBot] [debug] [Node 4] Operation enabled
+[2025-01-24 17:49:44.558] [ICEBot] [debug] [Node 1: Setting profile position parameters to: ACC: 500 [0.01mm/s^2] or [0.1deg/s^2]  |  DCC: 500 [0.01mm/s^2] or [0.1deg/s^2]  |  Vel: 2000 [0.01mm/s] or [0.1deg/s]  
+[2025-01-24 17:49:44.559] [ICEBot] [debug] [Node 2: Setting profile position parameters to: ACC: 572 [0.01mm/s^2] or [0.1deg/s^2]  |  DCC: 572 [0.01mm/s^2] or [0.1deg/s^2]  |  Vel: 1145 [0.01mm/s] or [0.1deg/s]  
+[2025-01-24 17:49:44.760] [ICEBot] [debug] [Node 1] Setting TPDO1 transmission type to 1
+[2025-01-24 17:49:44.760] [ICEBot] [debug] [Node 2] Setting TPDO1 transmission type to 1
+[2025-01-24 17:49:44.810] [ICEBot] [debug] [Node 1] Setting TPDO2 transmission type to 1
+[2025-01-24 17:49:44.812] [ICEBot] [debug] [Node 2] Setting TPDO2 transmission type to 1
+[2025-01-24 17:49:45.373] [ICEBot] [debug] [Node 1] Operation enabled
+[2025-01-24 17:49:45.373] [ICEBot] [debug] [Node 2] Operation enabled
+[2025-01-24 17:49:45.878] [ICEBot] [info] [Master] All Nodes Enabled
+[2025-01-24 17:49:46.409] [ICEBot] [debug] [Node 3] Task posted
+[2025-01-24 17:49:46.409] [ICEBot] [debug] [Node 5] Task posted
+[2025-01-24 17:49:46.409] [ICEBot] [debug] [Node 6] Task posted
+[2025-01-24 17:49:46.410] [ICEBot] [debug] [Node 4] Task posted
+[2025-01-24 17:49:46.423] [ICEBot] [debug] [Node 1] Task posted
+[2025-01-24 17:49:46.423] [ICEBot] [debug] [Node 2] Task posted
+[2025-01-24 17:49:46.429] [ICEBot] [info] [Master] Tasks Posted
+[2025-01-24 17:50:29.179] [ICEBot] [info] [Master] Setting soft home done
+[2025-01-24 19:15:21.282] [ICEBot] [debug] [Node 2] Deconfiging
+[2025-01-24 19:15:21.282] [ICEBot] [debug] [Node 1] Deconfiging
+[2025-01-24 19:15:21.282] [ICEBot] [debug] [Node 3] Deconfiging
+[2025-01-24 19:15:21.282] [ICEBot] [debug] [Node 4] Deconfiging
+[2025-01-24 19:15:21.282] [ICEBot] [debug] [Node 5] Deconfiging
+[2025-01-24 19:15:21.282] [ICEBot] [debug] [Node 6] Deconfiging
+[2025-01-24 19:15:21.333] [ICEBot] [debug] [Node 2] Switch on disabled
+[2025-01-24 19:15:21.334] [ICEBot] [debug] [Node 1] Switch on disabled
+[2025-01-24 19:15:21.334] [ICEBot] [debug] [Node 3] Switch on disabled
+[2025-01-24 19:15:21.334] [ICEBot] [debug] [Node 4] Switch on disabled
+[2025-01-24 19:15:21.335] [ICEBot] [debug] [Node 5] Switch on disabled
+[2025-01-24 19:15:21.335] [ICEBot] [debug] [Node 6] Switch on disabled

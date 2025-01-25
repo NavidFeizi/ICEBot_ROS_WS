@@ -39,8 +39,8 @@ enum class TargetType
   Multisine,
   Steps,
   Dataset,
-  File,
-  DirectTaskTargFromFile
+  JointsFile,
+  TaskFile
 };
 
 class ManagerNode : public rclcpp::Node
@@ -52,27 +52,28 @@ public:
     ManagerNode::setup_ros_interfaces();
     ManagerNode::create_dump_files();
 
-    double fc = 20.0;
+    double f_cutoff = 20.0;
     m_filter = std::make_unique<ButterworthFilter<1>>(m_sample_time);
-    m_filter->update_coeffs(fc);
+    m_filter->update_coeffs(f_cutoff);
 
-    m_expt_time = 40.0 + 2.0;
+    m_expt_time = 100.0 + 2.0;
     // m_expt_time = 240.0 + 2.0;
     // m_expt_time = 2.0 + 15.0;
 
-    m_trajectory_type = TargetType::Dataset;
+    m_trajectory_type = TargetType::JointsFile;
 
     switch (m_trajectory_type)
     {
-    case TargetType::File: // from input file
+    case TargetType::JointsFile: // from input file
     {
-      std::string fileName("actuation-miltisine.csv");
-      RCLCPP_INFO(this->get_logger(), "read from input file mode - file name: %s", fileName);
-      ManagerNode::load_input_files(m_trajectory, fileName);
+      std::string fileName("ICE_rotational_Actuation.csv");
+      RCLCPP_INFO(this->get_logger(), "read joints target from input file mode - file name: %s", fileName);
+      ManagerNode::load_input_files(m_joints_trajectory, fileName);
       m_traj_row = 1;
+      ManagerNode::send_recod_request();
       break;
     }
-    case TargetType::DirectTaskTargFromFile: // from input file
+    case TargetType::TaskFile: // from input file
     {
       std::string fileName("pseudo_random_trajectory.csv");
       // std::string fileName("trajectory_17.csv");
@@ -145,7 +146,7 @@ private:
     m_publisher_control_signal = this->create_publisher<interfaces::msg::Jointspace>("/joint_space/control_signal", 10); // to directly actuate the robot/simulation
     m_publisher_task_space_target = this->create_publisher<interfaces::msg::Taskspace>("/task_space/target", 10);        // to send task space target to the controller
 
-    m_record_client = this->create_client<interfaces::srv::Startrecording>("start_recording");    // call to data recodring service of the recorder node
+    m_record_client = this->create_client<interfaces::srv::Startrecording>("start_recording"); // call to data recodring service of the recorder node
     while (!m_record_client->wait_for_service(std::chrono::seconds(1)))
     {
       if (!rclcpp::ok())
@@ -183,7 +184,7 @@ private:
   }
 
   // Function to load input CSV files
-  void load_input_files(blaze::HybridMatrix<double, 60000UL, 3UL> &trajectory, const std::string &fileName)
+  void load_input_files(blaze::HybridMatrix<double, 60000UL, 5UL> &trajectory, const std::string &fileName)
   {
     std::filesystem::path ws_dir(PACKAGE_SHARE_DIR);
     ws_dir = ws_dir.parent_path().parent_path().parent_path().parent_path();
@@ -279,18 +280,21 @@ private:
 
     switch (m_trajectory_type)
     {
-    case TargetType::File:
+    case TargetType::JointsFile:
     {
-      if (m_traj_row < m_trajectory.rows()) // Ensure we are not exceeding the number of rows
+      if (m_traj_row < m_joints_trajectory.rows()) // Ensure we are not exceeding the number of rows
       {
-        double x_temp = {m_trajectory(m_traj_row, 1) * 1e3}; // Access the first column, index 0, scale by 1000
+        m_X = {m_joints_trajectory(m_traj_row, 1),  // Column 1 (index 0)
+               m_joints_trajectory(m_traj_row, 3),  // Column 2 (index 1)
+               m_joints_trajectory(m_traj_row, 2),  // Column 3 (index 2)
+               m_joints_trajectory(m_traj_row, 4)}; // Column 4 (index 3)
         // x_temp = m_filter->add_data_point(x_temp);                                   // Assuming this function is correctly handling a StaticVector of size 1
-        m_x = -1 * x_temp; // Store the filtered value
-        ++m_traj_row;      // Increment row index for next call
+        // m_X = -1 * x_temp; // Store the filtered value
+        ++m_traj_row; // Increment row index for next call
       }
       break;
     }
-    case TargetType::DirectTaskTargFromFile:
+    case TargetType::TaskFile:
     {
       auto msg = interfaces::msg::Taskspace();
       blaze::StaticVector<float, 5> row_data = {0.0, 0.0, 0.0, 0.0, 0.0};
@@ -388,23 +392,35 @@ private:
     // constexpr double velocity = 60.0;  // [mm/s] Velocity of the ramp rise and fall
     // ManagerNode::pulse_signal(period, amplitude, velocity, m_t, x);
 
-    // calcualte velocity signal
-    double x_dot = (m_x - m_x_prev) / m_sample_time;
-    m_x_prev = m_x;
+    // // // calcualte velocity signal
+    // // double x_dot = (m_x - m_x_prev) / m_sample_time;
+    // // m_x_prev = m_x;
+    // m_X[0] = m_x;
+    // m_X[1] = 0.0;
+    // m_X[2] = 0.0;
+    // m_X[3] = 0.0;
 
-    m_msg.position[0UL] = 0.0 * m_x * 1e-3; // insertion
-    m_msg.position[1UL] = 0.0 * m_x;        // rotation
-    m_msg.position[2UL] = (m_x <= 0) ? (m_x * 1e-3) : (0.3 * m_x * 1e-3);
-    m_msg.position[3UL] = (m_x >= 0) ? (-1 * m_x * 1e-3) : (-0.3 * m_x * 1e-3);
-    m_msg.position[4UL] = 0.0 * m_x * 1e-3; // right
-    m_msg.position[5UL] = 0.0 * m_x * 1e-3; // left
+    // // To slack the antagonist tendon
+    // m_msg.position[0UL] = m_X[0];                                // insertion
+    // m_msg.position[1UL] = m_X[0] * 20;                                       // rotation
+    // m_msg.position[2UL] = (m_X[0] <= 0) ? (m_X[0]) : (0.3 * m_X[0]);       // anterior (positive is pull)
+    // m_msg.position[3UL] = (m_X[0] >= 0) ? (-1 * m_X[0]) : (-0.3 * m_X[0]); // posterior (positive is pull)
+    // m_msg.position[4UL] = (m_X[1] <= 0) ? (m_X[1]) : (0.3 * m_X[1]);       // right
+    // m_msg.position[3UL] = (m_X[1] >= 0) ? (-1 * m_X[1]) : (-0.3 * m_X[1]); // left
 
-    m_msg.velocity[0UL] = 0.0 * x_dot * 1e-3; // insertion
-    m_msg.velocity[1UL] = 0.0 * x_dot;        // rotation
-    m_msg.velocity[2UL] = 1.0 * x_dot * 1e-3; // anterior (positive is pull)
-    m_msg.velocity[3UL] = -1.0 * x_dot * 1e-3; // posterior (positive is pull)
-    m_msg.velocity[4UL] = 0.0 * x_dot * 1e-3; // right
-    m_msg.velocity[5UL] = 0.0 * x_dot * 1e-3; // left
+    m_msg.position[0UL] = 0.0; // insertion
+    m_msg.position[1UL] = 0.0;        // rotation
+    m_msg.position[2UL] = -1*m_X[0];           // anterior (positive is pull)
+    m_msg.position[3UL] = -1*m_X[1];           // posterior (positive is pull)
+    m_msg.position[4UL] = -1*m_X[2];           // right
+    m_msg.position[5UL] = -1*m_X[3];           // left
+
+    m_msg.velocity[0UL] = 0.0 * 1e-3;  // insertion
+    m_msg.velocity[1UL] = 0.0;         // rotation
+    m_msg.velocity[2UL] = 0.0 * 1e-3;  // anterior (positive is pull)
+    m_msg.velocity[3UL] = 0.0 * 1e-3; // posterior (positive is pull)
+    m_msg.velocity[4UL] = 0.0 * 1e-3;  // right
+    m_msg.velocity[5UL] = 0.0 * 1e-3;  // left
 
     // if (m_t>= 0 && m_t<22.0)
     // {
@@ -440,7 +456,7 @@ private:
 
     // for RAL
     double frequency = 0.2;
-    double amplitude = 6.0;
+    double amplitude = 0.006;
 
     if (t >= 1 && t < m_expt_time - 1.0)
     {
@@ -564,13 +580,14 @@ private:
 
   double m_expt_time;
   double m_x, m_x_prev = 0.0;
+  blaze::StaticVector<double, 4> m_X, m_X_prev;
 
   bool m_task_space_mode;
   TargetType m_trajectory_type;
 
   std::vector<double> m_traj;
   long unsigned int m_traj_row = 1;
-  blaze::HybridMatrix<double, 60000UL, 3UL> m_trajectory;
+  blaze::HybridMatrix<double, 60000UL, 5UL> m_joints_trajectory; // time, T1,T2,T3,T4
   blaze::HybridMatrix<double, 60000UL, 5UL> m_task_trajectory;
   std::unique_ptr<ButterworthFilter<1>> m_filter;
 

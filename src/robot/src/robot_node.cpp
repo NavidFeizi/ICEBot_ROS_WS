@@ -183,7 +183,7 @@ private:
     // rclcpp::Time now = get_clock()->now();
     // double time = static_cast<double>(now.nanoseconds()) / 1E9;
 
-    m_robot->Get_PosVelCur(&m_x_abs, &m_x, &m_x_dot, &m_c);
+    m_robot->Get_PosVelCur(m_x_abs, m_x, m_x_dot, m_c);
 
     msg.position_abs[0] = m_x_abs[0];
     msg.position_abs[1] = m_x_abs[1];
@@ -255,17 +255,17 @@ private:
 
     m_x_des[0] = msg->position[0];
     m_x_des[1] = msg->position[1];
-    m_x_des[2] = -1 * msg->position[2];
-    m_x_des[3] = -1 * msg->position[3];
-    m_x_des[4] = -1 * msg->position[4];
-    m_x_des[5] = -1 * msg->position[5];
+    m_x_des[2] = msg->position[2];
+    m_x_des[3] = msg->position[3];
+    m_x_des[4] = msg->position[4];
+    m_x_des[5] = msg->position[5];
 
     m_x_dot_des[0] = msg->velocity[0];
     m_x_dot_des[1] = msg->velocity[1];
-    m_x_dot_des[2] = -1 * msg->velocity[2];
-    m_x_dot_des[3] = -1 * msg->velocity[3];
-    m_x_dot_des[4] = -1 * msg->velocity[4];
-    m_x_dot_des[5] = -1 * msg->velocity[5];
+    m_x_dot_des[2] = msg->velocity[2];
+    m_x_dot_des[3] = msg->velocity[3];
+    m_x_dot_des[4] = msg->velocity[4];
+    m_x_dot_des[5] = msg->velocity[5];
 
     // RCLCPP_INFO(this->get_logger(), "New Target");
   }
@@ -292,14 +292,14 @@ private:
       motion_vel = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
 
       current_pos_abs = {0.00, 0.00, 0.00, 0.00, 0.00, 0.00};
-      m_robot->Get_Position_Abs(&current_pos_abs);
+      m_robot->Get_Position_Abs(current_pos_abs);
 
       m_robot->Set_Target_Position_Abs(current_pos_abs);
       wait(100);
 
       // A-P plane
       RCLCPP_INFO(get_logger(), "->  Pulling anterior tendon");
-      motion_vel = {0.0, 0.0, 0.0004, 00.0, 0.0, 0.0}; 
+      motion_vel = {0.0, 0.0, -0.0004, 00.0, 0.0, 0.0}; 
       motion_inc = motion_vel * 0.01;
       while (m_x_catheter[0] < m_home_pre_tension)
       {
@@ -308,7 +308,7 @@ private:
         wait(10);
       }
       RCLCPP_INFO(get_logger(), "->  Pulling posterior tendon");
-      motion_vel = {0.0, 0.0, 0.0, 0.0002, 0.0, 0.0};
+      motion_vel = {0.0, 0.0, 0.0, -0.0002, 0.0, 0.0};
       motion_inc = motion_vel * 0.01;
       while (m_x_catheter[0] > 0.3)
       {
@@ -321,7 +321,7 @@ private:
       if (m_x_catheter[1] < 0.0)
       {
         RCLCPP_INFO(get_logger(), "->  Pulling right tendon");
-        motion_vel = {0.0, 0.0, 0.0, 0.0, 0.0004, 0.0}; 
+        motion_vel = {0.0, 0.0, 0.0, 0.0, -0.0004, 0.0}; 
         motion_inc = motion_vel * 0.01;
         while (m_x_catheter[1] < m_home_pre_tension)
         {
@@ -330,7 +330,7 @@ private:
           wait(10);
         }
         RCLCPP_INFO(get_logger(), "->  Pulling left tendon");
-        motion_vel = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0002};
+        motion_vel = {0.0, 0.0, 0.0, 0.0, 0.0, -0.0002};
         motion_inc = motion_vel * 0.01;
         while (m_x_catheter[1] > 0.3)
         {
@@ -342,7 +342,7 @@ private:
       else if (m_x_catheter[1] > 0.0)
       {
         RCLCPP_INFO(get_logger(), "->  Pulling left tendon");
-        motion_vel = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0004};
+        motion_vel = {0.0, 0.0, 0.0, 0.0, 0.0, -0.0004};
         motion_inc = motion_vel * 0.01;
         while (m_x_catheter[1] > -1 * m_home_pre_tension)
         {
@@ -351,7 +351,7 @@ private:
           wait(10);
         }
         RCLCPP_INFO(get_logger(), "->  Pulling right tendon");
-        motion_vel = {0.0, 0.0, 0.0, 0.0, 0.0002, 0.0}; 
+        motion_vel = {0.0, 0.0, 0.0, 0.0, -0.0002, 0.0}; 
         motion_inc = motion_vel * 0.01;
         while (m_x_catheter[1] < -0.3)
         {

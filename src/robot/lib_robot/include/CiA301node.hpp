@@ -116,6 +116,7 @@ private:
   double m_ppu;                   // pulse per unit (user defined unit for Faulhaber)
   double m_gear_ratio;            // rad->rev or m->rev
   double m_conversion_factor;
+  int m_axis_dir;
 
   // ============================ Configurable variables ============================
   unsigned int m_sample_time;   // unit: [ms]

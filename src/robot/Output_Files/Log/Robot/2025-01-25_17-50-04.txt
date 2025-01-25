@@ -1,0 +1,43 @@
+[2025-01-25 17:50:04.949] [ICEBot] [debug] [Node 1] Controller brand: "Faulhaber" - Operation layer:  CiA301 - PPU: 1000000.000000 - Gear ratio: 1.000000 - Encoder resoluton: 1000000.000000
+[2025-01-25 17:50:04.949] [ICEBot] [debug] [Node 2] Controller brand: "Faulhaber" - Operation layer:  CiA301 - PPU: 572.957795 - Gear ratio: 1.000000 - Encoder resoluton: 572.957795
+[2025-01-25 17:50:04.949] [ICEBot] [debug] [Node 5] Controller brand: Faulhaber - Operation layer:  Faulhaber Command - PPU: 500000.000000 - Gear ratio: 0.006000 - Encoder resoluton: 3000.000000
+[2025-01-25 17:50:04.949] [ICEBot] [debug] [Node 6] Controller brand: Faulhaber - Operation layer:  Faulhaber Command - PPU: 500000.000000 - Gear ratio: 0.006000 - Encoder resoluton: 3000.000000
+[2025-01-25 17:50:04.949] [ICEBot] [debug] [Node 4] Controller brand: Faulhaber - Operation layer:  Faulhaber Command - PPU: 500000.000000 - Gear ratio: 0.006000 - Encoder resoluton: 3000.000000
+[2025-01-25 17:50:04.949] [ICEBot] [debug] [Node 3] Controller brand: Faulhaber - Operation layer:  Faulhaber Command - PPU: 500000.000000 - Gear ratio: 0.006000 - Encoder resoluton: 3000.000000
+[2025-01-25 17:50:04.973] [ICEBot] [debug] [Node 3] Configing
+[2025-01-25 17:50:04.974] [ICEBot] [debug] [Node 6] Configing
+[2025-01-25 17:50:04.974] [ICEBot] [debug] [Node 5] Configing
+[2025-01-25 17:50:04.977] [ICEBot] [debug] [Node 4] Configing
+[2025-01-25 17:50:05.015] [ICEBot] [debug] [Node 1] Configing
+[2025-01-25 17:50:05.017] [ICEBot] [debug] [Node 2] Configing
+[2025-01-25 17:50:05.024] [ICEBot] [debug] [Node 3] Booted successfully.
+[2025-01-25 17:50:05.024] [ICEBot] [debug] [Node 6] Booted successfully.
+[2025-01-25 17:50:05.024] [ICEBot] [debug] [Node 5] Booted successfully.
+[2025-01-25 17:50:05.028] [ICEBot] [debug] [Node 4] Booted successfully.
+[2025-01-25 17:50:05.066] [ICEBot] [debug] [Node 1] Booted successfully.
+[2025-01-25 17:50:05.067] [ICEBot] [debug] [Node 2] Booted successfully.
+[2025-01-25 17:50:05.067] [ICEBot] [info] [Master] Nodes Booted Successfully
+[2025-01-25 17:50:05.074] [ICEBot] [debug] [Node 3] No fault to reset
+[2025-01-25 17:50:05.075] [ICEBot] [debug] [Node 6] No fault to reset
+[2025-01-25 17:50:05.075] [ICEBot] [debug] [Node 5] No fault to reset
+[2025-01-25 17:50:05.078] [ICEBot] [debug] [Node 4] No fault to reset
+[2025-01-25 17:50:05.137] [ICEBot] [warning] [Node 1] Reset fault => Fault status: 0
+[2025-01-25 17:50:05.138] [ICEBot] [warning] [Node 2] Reset fault => Fault status: 0
+[2025-01-25 17:50:05.239] [ICEBot] [error] [Node 1] Switch on disabled  =>  Switch on disabled
+[2025-01-25 17:50:05.240] [ICEBot] [error] [Node 2] Switch on disabled  =>  Switch on disabled
+[2025-01-25 17:50:05.277] [ICEBot] [debug] [Node 3] Switch on disabled  =>  Ready to Switch On  =>  Switched On
+[2025-01-25 17:50:05.278] [ICEBot] [debug] [Node 6] Switch on disabled  =>  Ready to Switch On  =>  Switched On
+[2025-01-25 17:50:05.279] [ICEBot] [debug] [Node 5] Switch on disabled  =>  Ready to Switch On  =>  Switched On
+[2025-01-25 17:50:05.281] [ICEBot] [debug] [Node 4] Switch on disabled  =>  Ready to Switch On  =>  Switched On
+[2025-01-25 17:50:06.807] [ICEBot] [debug] [Node 1] Deconfiging
+[2025-01-25 17:50:06.807] [ICEBot] [debug] [Node 2] Deconfiging
+[2025-01-25 17:50:06.807] [ICEBot] [debug] [Node 3] Deconfiging
+[2025-01-25 17:50:06.807] [ICEBot] [debug] [Node 4] Deconfiging
+[2025-01-25 17:50:06.807] [ICEBot] [debug] [Node 5] Deconfiging
+[2025-01-25 17:50:06.807] [ICEBot] [debug] [Node 6] Deconfiging
+[2025-01-25 17:50:06.858] [ICEBot] [debug] [Node 1] Switch on disabled
+[2025-01-25 17:50:06.858] [ICEBot] [debug] [Node 2] Switch on disabled
+[2025-01-25 17:50:06.859] [ICEBot] [debug] [Node 3] Switch on disabled
+[2025-01-25 17:50:06.859] [ICEBot] [debug] [Node 4] Switch on disabled
+[2025-01-25 17:50:06.860] [ICEBot] [debug] [Node 5] Switch on disabled
+[2025-01-25 17:50:06.860] [ICEBot] [debug] [Node 6] Switch on disabled

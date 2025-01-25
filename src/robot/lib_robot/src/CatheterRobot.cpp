@@ -15,7 +15,7 @@ Robot::Robot(int sample_time,
   this->encoder_res = {1000 * 1000.0,
                        10 * 180 * M_1_PI,
                        3000, 3000, 3000, 3000};          // pulse/rev
-  this->gear_ratio = {1, 1, 18E-3/3, 18E-3/3, 18E-3/3, 18E-3/3}; // rad->rev or m->rev - (gearbox and belt is integrated in the motion controller parameters)
+  this->gear_ratio = {1, -1, -18E-3/3, -18E-3/3, -18E-3/3, -18E-3/3}; // rad->rev or m->rev - (gearbox and belt is integrated in the motion controller parameters)
   this->max_acc = max_acc;                               // deg->rev or mm->rev
   this->max_vel = max_vel;                               // deg->rev or mm->rev
   this->velocity_factor = {10.0, 10.0, 3.2, 3.2, 3.2, 3.2};
@@ -337,7 +337,7 @@ void Robot::Start_Thread()
 
 /* enable operation of all joints
   @param enable: true = enable, false = disable */
-void Robot::Enable_Operation(bool enable)
+void Robot::Enable_Operation(const bool enable)
 {
   if (m_enable_joint[0])
   {
@@ -367,10 +367,10 @@ void Robot::Enable_Operation(bool enable)
 
 /* set the current positoin of the robot as zero position on the motion controller
   - this function halts the target task loop while running */
-void Robot::Set_Soft_Home(blaze::StaticVector<double, 6> offset)
+void Robot::Set_Soft_Home(const blaze::StaticVector<double, 6> offset)
 {
   blaze::StaticVector<double, 6> current_pos_abs, homeOffsets;
-  Robot::Get_Position_Abs(&current_pos_abs);
+  Robot::Get_Position_Abs(current_pos_abs);
 
   homeOffsets = current_pos_abs - offset;
 
@@ -386,7 +386,7 @@ void Robot::Set_Soft_Home(blaze::StaticVector<double, 6> offset)
 
 /* set the current positoin of the robot as zero position on the motion controller
   - this function halts the target task loop while running */
-void Robot::Set_Zero_Position(blaze::StaticVector<double, 6> offset)
+void Robot::Set_Zero_Position(const blaze::StaticVector<double, 6> offset)
 {
   logger->info("[Master] Setting zero position");
 
@@ -461,7 +461,7 @@ void Robot::Find_Fowrard_Limits()
                       { return l; }))
   {
     // update average current
-    this->Get_Current(&p_current);
+    this->Get_Current(p_current);
     for (int node = 0; node < 6; ++node)
     {
       currentBuffers[node].push_back(p_current[node]);
@@ -560,8 +560,11 @@ bool Robot::Get_Controller_Switch_Status()
 
 /* Actuatre robot to the targert absolute (with respect to the 0 (forward limit) position) joint positions in mm or deg unit
         (with respect to zero position (distal limit) - positive value is towards proximal end)     */
-void Robot::Set_Target_Position_Abs(blaze::StaticVector<double, 6> posTarget)
+void Robot::Set_Target_Position_Abs(const blaze::StaticVector<double, 6> &target)
 {
+  blaze::StaticVector<double, 6> posTarget = target;
+  // posTarget[0] = -1 * posTarget[0];
+
   if (this->flag_position_limit)
   {
     if (!(Robot::Position_limits_check(posTarget) == 0))
@@ -598,8 +601,11 @@ void Robot::Set_Target_Position_Abs(blaze::StaticVector<double, 6> posTarget)
 
 /* Actuatre robot to the targert joint positions in mm or deg unit
         (with respect to zero position (distal limit) - positive value is towards proximal end)     */
-void Robot::Set_Target_Position(blaze::StaticVector<double, 6> posTarget)
+void Robot::Set_Target_Position(const blaze::StaticVector<double, 6> &target)
 {
+  blaze::StaticVector<double, 6> posTarget = target;
+  // posTarget[0] = -1 * posTarget[0];
+
   if (this->flag_position_limit)
   {
     if (!(Robot::Position_limits_check(posTarget) == 0))
@@ -636,8 +642,10 @@ void Robot::Set_Target_Position(blaze::StaticVector<double, 6> posTarget)
 
 /* Actuatre robot to the targert absolute joint positions in [mm/s] or [deg/s] unit
         (with respect to zero position (distal limit) - positive value is towards proximal end)     */
-void Robot::Set_Target_Velocity(blaze::StaticVector<double, 6> velTarget)
+void Robot::Set_Target_Velocity(const blaze::StaticVector<double, 6> &target)
 {
+  blaze::StaticVector<double, 6> velTarget = target;
+  // velTarget[0] = -1 * velTarget[0];
 
   // Clamp the velTarget values to stay within the bounds
   for (size_t i = 0; i < velTarget.size(); ++i)
@@ -681,154 +689,148 @@ void Robot::Set_Target_Velocity(blaze::StaticVector<double, 6> velTarget)
 }
 
 /* Gets the motor current in [mA] unit */
-void Robot::Get_Current(blaze::StaticVector<double, 6> *p_current)
+void Robot::Get_Current(blaze::StaticVector<double, 6> &current)
 {
-  if (p_current)
+  if (m_enable_joint[0])
   {
-
-    if (m_enable_joint[0])
-    {
-      this->m_insertion->GetCurrent(((*p_current)[0]));
-    }
-    if (m_enable_joint[1])
-    {
-      this->m_rotation->GetCurrent(((*p_current)[1]));
-    }
-    if (m_enable_joint[2])
-    {
-      this->m_tendon_ant->GetCurrent(((*p_current)[2]));
-    }
-    if (m_enable_joint[3])
-    {
-      this->m_tendon_post->GetCurrent(((*p_current)[3]));
-    }
-    if (m_enable_joint[4])
-    {
-      this->m_tendon_right->GetCurrent(((*p_current)[4]));
-    }
-    if (m_enable_joint[5])
-    {
-      this->m_tendon_left->GetCurrent(((*p_current)[5]));
-    }
+    this->m_insertion->GetCurrent(current[0]);
   }
+  if (m_enable_joint[1])
+  {
+    this->m_rotation->GetCurrent(current[1]);
+  }
+  if (m_enable_joint[2])
+  {
+    this->m_tendon_ant->GetCurrent(current[2]);
+  }
+  if (m_enable_joint[3])
+  {
+    this->m_tendon_post->GetCurrent(current[3]);
+  }
+  if (m_enable_joint[4])
+  {
+    this->m_tendon_right->GetCurrent(current[4]);
+  }
+  if (m_enable_joint[5])
+  {
+    this->m_tendon_left->GetCurrent(current[5]);
+  }
+  // current = -1*current;
+  // current[0] = -1 * current[0]; 
 }
 
 /* Gets the current velocity (with respect to zero position - distal limit) of all actuators in [mm/s] or [deg/s] unit */
-void Robot::Get_Velocity(blaze::StaticVector<double, 6> *p_velCurrent)
+void Robot::Get_Velocity(blaze::StaticVector<double, 6> &velCurrent)
 {
-  if (p_velCurrent)
+  if (m_enable_joint[0])
   {
-
-    if (m_enable_joint[0])
-    {
-      this->m_insertion->GetActualVel(((*p_velCurrent)[0]));
-    }
-    if (m_enable_joint[1])
-    {
-      this->m_rotation->GetActualVel(((*p_velCurrent)[1]));
-    }
-    if (m_enable_joint[2])
-    {
-      this->m_tendon_ant->GetActualVel(((*p_velCurrent)[2]));
-    }
-    if (m_enable_joint[3])
-    {
-      this->m_tendon_post->GetActualVel(((*p_velCurrent)[3]));
-    }
-    if (m_enable_joint[4])
-    {
-      this->m_tendon_right->GetActualVel(((*p_velCurrent)[4]));
-    }
-    if (m_enable_joint[5])
-    {
-      this->m_tendon_left->GetActualVel(((*p_velCurrent)[5]));
-    }
+    this->m_insertion->GetActualVel(velCurrent[0]);
   }
+  if (m_enable_joint[1])
+  {
+    this->m_rotation->GetActualVel(velCurrent[1]);
+  }
+  if (m_enable_joint[2])
+  {
+    this->m_tendon_ant->GetActualVel(velCurrent[2]);
+  }
+  if (m_enable_joint[3])
+  {
+    this->m_tendon_post->GetActualVel(velCurrent[3]);
+  }
+  if (m_enable_joint[4])
+  {
+    this->m_tendon_right->GetActualVel(velCurrent[4]);
+  }
+  if (m_enable_joint[5])
+  {
+    this->m_tendon_left->GetActualVel(velCurrent[5]);
+  }
+  // velCurrent = -1 * velCurrent;
+  // velCurrent[0] = -1 * velCurrent[0]; 
 }
 
 /* Gets the current absolute position (with respect to zero position - distal limit) of all actuators in [mm] or [deg] unit */
-void Robot::Get_Position_Abs(blaze::StaticVector<double, 6> *p_posCurrent)
+void Robot::Get_Position_Abs(blaze::StaticVector<double, 6> &posCurrent)
 {
-  if (p_posCurrent)
+  if (m_enable_joint[0])
   {
-    if (m_enable_joint[0])
-    {
-      this->m_insertion->GetActualPosAbs(((*p_posCurrent)[0]));
-    }
-    if (m_enable_joint[1])
-    {
-      this->m_rotation->GetActualPosAbs(((*p_posCurrent)[1]));
-    }
-    if (m_enable_joint[2])
-    {
-      this->m_tendon_ant->GetActualPosAbs(((*p_posCurrent)[2]));
-    }
-    if (m_enable_joint[3])
-    {
-      this->m_tendon_post->GetActualPosAbs(((*p_posCurrent)[3]));
-    }
-    if (m_enable_joint[4])
-    {
-      this->m_tendon_right->GetActualPosAbs(((*p_posCurrent)[4]));
-    }
-    if (m_enable_joint[5])
-    {
-      this->m_tendon_left->GetActualPosAbs(((*p_posCurrent)[5]));
-    }
+    this->m_insertion->GetActualPosAbs(posCurrent[0]);
   }
+  if (m_enable_joint[1])
+  {
+    this->m_rotation->GetActualPosAbs(posCurrent[1]);
+  }
+  if (m_enable_joint[2])
+  {
+    this->m_tendon_ant->GetActualPosAbs(posCurrent[2]);
+  }
+  if (m_enable_joint[3])
+  {
+    this->m_tendon_post->GetActualPosAbs(posCurrent[3]);
+  }
+  if (m_enable_joint[4])
+  {
+    this->m_tendon_right->GetActualPosAbs(posCurrent[4]);
+  }
+  if (m_enable_joint[5])
+  {
+    this->m_tendon_left->GetActualPosAbs(posCurrent[5]);
+  }
+  // posCurrent = -1 * posCurrent;
+  // posCurrent[0] = -1 * posCurrent[0];
 }
 
 /* Gets the current absolute position (with respect to zero position - distal limit) of all actuators in [mm] or [deg] unit */
-void Robot::Get_Position(blaze::StaticVector<double, 6> *p_posCurrent)
+void Robot::Get_Position(blaze::StaticVector<double, 6> &posCurrent)
 {
-  if (p_posCurrent)
+  if (m_enable_joint[0])
   {
-    if (m_enable_joint[0])
-    {
-      this->m_insertion->GetActualPos(((*p_posCurrent)[0]));
-    }
-    if (m_enable_joint[1])
-    {
-      this->m_rotation->GetActualPos(((*p_posCurrent)[1]));
-    }
-    if (m_enable_joint[2])
-    {
-      this->m_tendon_ant->GetActualPos(((*p_posCurrent)[2]));
-    }
-    if (m_enable_joint[3])
-    {
-      this->m_tendon_post->GetActualPos(((*p_posCurrent)[3]));
-    }
-    if (m_enable_joint[4])
-    {
-      this->m_tendon_right->GetActualPos(((*p_posCurrent)[4]));
-    }
-    if (m_enable_joint[5])
-    {
-      this->m_tendon_left->GetActualPos(((*p_posCurrent)[5]));
-    }
+    this->m_insertion->GetActualPos(posCurrent[0]);
   }
+  if (m_enable_joint[1])
+  {
+    this->m_rotation->GetActualPos(posCurrent[1]);
+  }
+  if (m_enable_joint[2])
+  {
+    this->m_tendon_ant->GetActualPos(posCurrent[2]);
+  }
+  if (m_enable_joint[3])
+  {
+    this->m_tendon_post->GetActualPos(posCurrent[3]);
+  }
+  if (m_enable_joint[4])
+  {
+    this->m_tendon_right->GetActualPos(posCurrent[4]);
+  }
+  if (m_enable_joint[5])
+  {
+    this->m_tendon_left->GetActualPos(posCurrent[5]);
+  }
+  // posCurrent = -1 * posCurrent;
+  // posCurrent[0] = -1 * posCurrent[0];
 }
 
 /**/
-void Robot::Get_PosVelCur(blaze::StaticVector<double, 6> *p_posCurrent_abs,
-                          blaze::StaticVector<double, 6> *p_posCurrent,
-                          blaze::StaticVector<double, 6> *p_velCurrent,
-                          blaze::StaticVector<double, 6> *p_current)
+void Robot::Get_PosVelCur(blaze::StaticVector<double, 6> &posCurrent_abs,
+                          blaze::StaticVector<double, 6> &posCurrent,
+                          blaze::StaticVector<double, 6> &velCurrent,
+                          blaze::StaticVector<double, 6> &current)
 {
-  Robot::Get_Position_Abs(p_posCurrent_abs);
-  Robot::Get_Position(p_posCurrent);
-  Robot::Get_Velocity(p_velCurrent);
-  Robot::Get_Current(p_current);
+  Robot::Get_Position_Abs(posCurrent_abs);
+  Robot::Get_Position(posCurrent);
+  Robot::Get_Velocity(velCurrent);
+  Robot::Get_Current(current);
 }
 
 /* Gets the current absolute position (with respect to zero position - distal limit) of all actuators in [mm] or [deg] unit */
-void Robot::Convert_pos_to_CTR_frame(blaze::StaticVector<double, 6> &posCurrent,
-                                     blaze::StaticVector<double, 6> *posInCTRFrame)
+void Robot::Convert_pos_to_CTR_frame(const blaze::StaticVector<double, 6> &posCurrent,
+                                     blaze::StaticVector<double, 6> &posInCTRFrame)
 {
   for (size_t i = 0; i < posCurrent.size(); ++i)
   {
-    (*posInCTRFrame)[i] = posCurrent[i] + this->posOffsets[i];
+    posInCTRFrame[i] = posCurrent[i] + this->posOffsets[i];
   }
 }
 
@@ -850,7 +852,7 @@ int Robot::Position_limits_check(blaze::StaticVector<double, 6> posTarget)
   }
   blaze::StaticVector<double, 6> posInCTRFrame = blaze::StaticVector<double, 6>(0);
 
-  Robot::Convert_pos_to_CTR_frame(posTarget, &posInCTRFrame);
+  Robot::Convert_pos_to_CTR_frame(posTarget, posInCTRFrame);
 
   return 0;
 }

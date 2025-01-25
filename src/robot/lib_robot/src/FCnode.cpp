@@ -75,8 +75,8 @@ FCNode::FCNode(ev_exec_t * /*exec*/,
     if (m_controller_brand == "Maxon" || m_controller_brand == "Faulhaber")
     {
         double conversion_factor = (m_controller_brand == "Maxon") ? (60.0 / m_gear_ratio) : (m_ppu / VelocityFactor);
-        m_profile_vel_SI = static_cast<unsigned int>(ProfileVel * conversion_factor);
-        m_profile_acc_SI = static_cast<unsigned int>(ProfileAcc * conversion_factor);
+        m_profile_vel_SI = static_cast<unsigned int>(abs(ProfileVel * conversion_factor));
+        m_profile_acc_SI = static_cast<unsigned int>(abs(ProfileAcc * conversion_factor));
     }
     else
     {
@@ -269,6 +269,8 @@ void FCNode::OnRpdoWrite(uint16_t idx, uint8_t subidx) noexcept
 /* */
 void FCNode::OnSync(uint8_t cnt, const time_point &t) noexcept
 {
+    (void) cnt;
+    (void) t;
     try
     {
         // is part is for if you want to receive information on PDO2, this part request the parameter that you need
@@ -405,6 +407,7 @@ void FCNode::EnableOperation(bool enable)
 // ********************** this function is under construction **********************
 void FCNode::EnableOperationWithPdo(const bool enable)
 {
+    (void) enable;
     // Node::FaulhaberCommand("EN", 0); // enable
     // Wait(AsyncWait(duration(std::chrono::microseconds(10))));
     // flag_operation_enabled = true;

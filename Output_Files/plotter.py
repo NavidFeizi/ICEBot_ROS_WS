@@ -6,18 +6,18 @@ from scipy.signal import savgol_filter
 from scipy.interpolate import CubicSpline
 import pandas as pd
 
-# plt.rcParams["grid.color"] = "lightgray"
-# plt.rcParams["grid.linewidth"] = 0.5
-# matplotlib.rc("font", family="serif", size=7)
-# matplotlib.rcParams["text.usetex"] = True
+plt.rcParams["grid.color"] = "lightgray"
+plt.rcParams["grid.linewidth"] = 0.5
+matplotlib.rc("font", family="serif", size=7)
+matplotlib.rcParams["text.usetex"] = True
 
 def main():
     # Read data from csv file
-    folderName = "AcuNav ICE PRS";
-    output_file = os.path.join("Output_Files/" + folderName , "calibration_data.csv")
-    robot_data = np.genfromtxt("Output_Files/" + folderName + "/joint_space.csv", delimiter=",", dtype=float, skip_header=1)
-    FT_data = np.genfromtxt("Output_Files/" + folderName + "/FTsensor.csv", delimiter=",", dtype=float, skip_header=1)
-    EMT_data = np.genfromtxt("Output_Files/" + folderName + "/task_space.csv", delimiter=",", dtype=float, skip_header=1)
+    folderName = "2025-01-25_18-42-01";
+    output_file = os.path.join(os.path.dirname(__file__), folderName , "calibration_data.csv")
+    robot_data = np.genfromtxt(os.path.join(os.path.dirname(__file__), folderName, "joint_space.csv"), delimiter=",", dtype=float, skip_header=1)
+    FT_data = np.genfromtxt(os.path.join(os.path.dirname(__file__), folderName, "FTsensor.csv"), delimiter=",", dtype=float, skip_header=1)
+    EMT_data = np.genfromtxt(os.path.join(os.path.dirname(__file__), folderName, "task_space.csv"), delimiter=",", dtype=float, skip_header=1)
 
     # Separate the columns into x, y, and z
     t = robot_data[:,0];
@@ -72,7 +72,7 @@ def main():
 
     ax[1].set_title("Tip position")
     ax[0].plot(t, tip_pos[:,0]*1E3, c="r", label="X", linewidth=1.0)  # Scatter plot with red circles
-    # ax[0].plot(t, tip_pos[:,1]*1E3, c="g", label="Y", linewidth=1.0)  # Scatter plot with red circles
+    ax[0].plot(t, tip_pos[:,1]*1E3, c="g", label="Y", linewidth=1.0)  # Scatter plot with red circles
     ax[0].plot(t, tip_pos[:,2]*1E3, c="b", label="Z", linewidth=1.0)  # Scatter plot with red circles
     # ax[0].plot(t, tip_pos_targ[:,0]*1E3, c="r", label="X", linewidth=1.5, linestyle="--")  # Scatter plot with red circles
     # ax[0].plot(t, tip_pos_targ[:,1]*1E3, c="b", label="Y", linewidth=1.5, linestyle="--")  # Scatter plot with red circles
@@ -87,7 +87,11 @@ def main():
 
     ax[1].set_title("Tendon position - Positive is pulling")
     # ax[1].plot(t, q[:, column]*1e3, c="black", label="q", linewidth=1.0)  # Scatter plot with red circles
-    ax[1].plot(t, joint_pos[:, column]*1e3, c="black", label="pos", linewidth=1.0, linestyle="-")  # Scatter plot with red circles
+    ax[1].plot(t, joint_pos[:, 2]*1e3, c="black", label="T_1", linewidth=1.0, linestyle="-")  # Scatter plot with red circles
+    ax[1].plot(t, joint_pos[:, 3]*1e3, c="blue", label="T_3", linewidth=1.0, linestyle="-")  # Scatter plot with red circles
+    ax[1].plot(t, joint_pos[:, 4]*1e3, c="red", label="T_2", linewidth=1.0, linestyle="-")  # Scatter plot with red circles
+    ax[1].plot(t, joint_pos[:, 5]*1e3, c="green", label="T_4", linewidth=1.0, linestyle="-")  # Scatter plot with red circles
+
     # ax[1].plot(resample_t, joint_pos_interp[:, column]*1e3, c="red", label="pos_res", linewidth=1.5, linestyle="--")  # Scatter plot with red circles
     # ax[1].plot(t, joint_pos_targ[:, column]*1e3, c="red", label="ref", linewidth=1.5, linestyle=":")  # Scatter plot with red circles
     ax[1].set_ylabel("$\mathrm{joint}$ [mm]")
@@ -97,7 +101,10 @@ def main():
 
     ax[2].set_title("Tendon velocity - Positive is pulling")
     # ax[2].plot(t, q_dot[:, column] * 1e3, c="cyan", label="$\dot{q}$", linewidth=1.0)  # Position plot
-    ax[2].plot(t, joint_velocity[:, column] * 1e3, c="blue", label="vel", linewidth=1.5, linestyle="--")  # Position plot
+    ax[2].plot(t, joint_velocity[:, 2] * 1e3, c="black", label="T_1", linewidth=1.0, linestyle="-")  # Position plot
+    ax[2].plot(t, joint_velocity[:, 3] * 1e3, c="blue", label="T_3", linewidth=1.0, linestyle="-")  # Position plot
+    ax[2].plot(t, joint_velocity[:, 4] * 1e3, c="red", label="T_2", linewidth=1.0, linestyle="-")  # Position plot
+    ax[2].plot(t, joint_velocity[:, 5] * 1e3, c="green", label="T_4", linewidth=1.0, linestyle="-")  # Position plot
     ax[2].set_ylabel("$\mathrm{joint}$ [mm/s]")
     ax[2].minorticks_on()
     ax[2].grid(which="both", color="lightgray", linestyle="--", linewidth=0.5)

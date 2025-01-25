@@ -78,21 +78,21 @@ public:
     void initialize_io();
     bool Get_Controller_Switch_Status();
     void Start_Thread();
-    void Enable_Operation(bool enable);
-    void Set_Zero_Position(blaze::StaticVector<double, 6> offset);
-    void Set_Soft_Home(blaze::StaticVector<double, 6> offset);
+    void Enable_Operation(const bool enable);
+    void Set_Zero_Position(const blaze::StaticVector<double, 6> offset);
+    void Set_Soft_Home(const blaze::StaticVector<double, 6> offset);
     void Find_Fowrard_Limits();
-    void Set_Target_Position_Abs(blaze::StaticVector<double, 6> posTarget);
-    void Set_Target_Position(blaze::StaticVector<double, 6> posTarget);
-    void Set_Target_Velocity(blaze::StaticVector<double, 6> velTarget);
-    void Get_Current(blaze::StaticVector<double, 6> *p_current);
-    void Get_Velocity(blaze::StaticVector<double, 6> *p_velCurrent);
-    void Get_Position_Abs(blaze::StaticVector<double, 6> *p_posCurrent);
-    void Get_Position(blaze::StaticVector<double, 6> *p_posCurrent);
-    void Get_PosVelCur(blaze::StaticVector<double, 6> *p_posCurrent_abs,
-                       blaze::StaticVector<double, 6> *p_posCurrent,
-                       blaze::StaticVector<double, 6> *p_velCurrent,
-                       blaze::StaticVector<double, 6> *p_current);
+    void Set_Target_Position_Abs(const blaze::StaticVector<double, 6> &posTarget);
+    void Set_Target_Position(const blaze::StaticVector<double, 6> &posTarget);
+    void Set_Target_Velocity(const blaze::StaticVector<double, 6> &velTarget);
+    void Get_Current(blaze::StaticVector<double, 6> &current);
+    void Get_Velocity(blaze::StaticVector<double, 6> &velCurrent);
+    void Get_Position_Abs(blaze::StaticVector<double, 6> &posCurrent);
+    void Get_Position(blaze::StaticVector<double, 6> &posCurrent);
+    void Get_PosVelCur(blaze::StaticVector<double, 6> &posCurrent_abs,
+                       blaze::StaticVector<double, 6> &posCurrent,
+                       blaze::StaticVector<double, 6> &velCurrent,
+                       blaze::StaticVector<double, 6> &current);
     bool Get_reachStatus();
     void Wait_until_reach();
 
@@ -108,7 +108,7 @@ public:
 
 private:
     void Fiber_loop();
-    void Convert_pos_to_CTR_frame(blaze::StaticVector<double, 6> &posCurrent, blaze::StaticVector<double, 6> *posInCTRFrame);
+    void Convert_pos_to_CTR_frame(const blaze::StaticVector<double, 6> &posCurrent, blaze::StaticVector<double, 6> &posInCTRFrame);
     int Position_limits_check(blaze::StaticVector<double, 6> posTarget);
     void InitializeLogger();
 
