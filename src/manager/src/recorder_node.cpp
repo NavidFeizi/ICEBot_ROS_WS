@@ -41,7 +41,9 @@ private:
   void declare_parameters()
   {
     declare_parameter<double>("sample_time", 4E-3);
+    declare_parameter<int>("task_period_factor", 4);
     m_sample_time = get_parameter("sample_time").as_double();
+    m_task_period_factor = get_parameter("task_period_factor").as_int();
   }
 
   // Function to set up ROS interfaces including subscriptions, services, and timers
@@ -277,15 +279,20 @@ private:
                             << std::setprecision(4)
                             << m_force_torque[3] << ',' << m_force_torque[4] << ',' << m_force_torque[5] << '\n';
 
-      m_em_tracker_dump_file << std::fixed << std::setprecision(3)
-                             << time << ","
-                             << std::setprecision(5)
-                             << m_task_space_pos[0] << ',' << m_task_space_pos[1] << ',' << m_task_space_pos[2] << ','
-                             << m_task_space_vel[0] << ',' << m_task_space_vel[1] << ',' << m_task_space_vel[2] << ','
-                             << m_task_space_pos_nf[0] << ',' << m_task_space_pos_nf[1] << ',' << m_task_space_pos_nf[2] << ','
-                             << m_task_space_vel_nf[0] << ',' << m_task_space_vel_nf[1] << ',' << m_task_space_vel_nf[2] << ','
-                             << m_task_space_target_pos[0] << ',' << m_task_space_target_pos[1] << ',' << m_task_space_target_pos[2] << ','
-                             << m_task_space_target_vel[0] << ',' << m_task_space_target_vel[1] << ',' << m_task_space_target_vel[2] << '\n';
+      if (m_counter % m_task_period_factor == 0)
+      {
+        m_em_tracker_dump_file << std::fixed << std::setprecision(3)
+                              << time << ","
+                              << std::setprecision(5)
+                              << m_task_space_pos[0] << ',' << m_task_space_pos[1] << ',' << m_task_space_pos[2] << ','
+                              << m_task_space_vel[0] << ',' << m_task_space_vel[1] << ',' << m_task_space_vel[2] << ','
+                              << m_task_space_pos_nf[0] << ',' << m_task_space_pos_nf[1] << ',' << m_task_space_pos_nf[2] << ','
+                              << m_task_space_vel_nf[0] << ',' << m_task_space_vel_nf[1] << ',' << m_task_space_vel_nf[2] << ','
+                              << m_task_space_target_pos[0] << ',' << m_task_space_target_pos[1] << ',' << m_task_space_target_pos[2] << ','
+                              << m_task_space_target_vel[0] << ',' << m_task_space_target_vel[1] << ',' << m_task_space_target_vel[2] << '\n';
+        m_counter = 0;
+      }
+      m_counter++;
     }
     else
     {
@@ -317,6 +324,7 @@ private:
   double m_sample_time;
   double m_rec_duration, m_time = 0.0;
   bool m_flag_recording = false;
+  uint m_task_period_factor, m_counter = 0;
 
   std::ofstream m_robot_dump_file;
   std::ofstream m_ft_sensor_dump_file;

@@ -1,0 +1,25 @@
+[2025-01-29 11:56:48.220] [ICEBot] [debug] [Node 1] Controller brand: "Faulhaber" - Operation layer:  CiA301 - PPU: 1000000.000000 - Gear ratio: 1.000000 - Encoder resoluton: 1000000.000000
+[2025-01-29 11:56:48.220] [ICEBot] [debug] [Node 2] Controller brand: "Faulhaber" - Operation layer:  CiA301 - PPU: -572.957795 - Gear ratio: -1.000000 - Encoder resoluton: 572.957795
+[2025-01-29 11:56:48.220] [ICEBot] [debug] [Node 5] Controller brand: Faulhaber - Operation layer:  Faulhaber Command - PPU: -500000.000000 - Gear ratio: -0.006000 - Encoder resoluton: 3000.000000
+[2025-01-29 11:56:48.220] [ICEBot] [debug] [Node 6] Controller brand: Faulhaber - Operation layer:  Faulhaber Command - PPU: -500000.000000 - Gear ratio: -0.006000 - Encoder resoluton: 3000.000000
+[2025-01-29 11:56:48.220] [ICEBot] [debug] [Node 4] Controller brand: Faulhaber - Operation layer:  Faulhaber Command - PPU: -500000.000000 - Gear ratio: -0.006000 - Encoder resoluton: 3000.000000
+[2025-01-29 11:56:48.220] [ICEBot] [debug] [Node 3] Controller brand: Faulhaber - Operation layer:  Faulhaber Command - PPU: -500000.000000 - Gear ratio: -0.006000 - Encoder resoluton: 3000.000000
+[2025-01-29 11:56:48.250] [ICEBot] [debug] [Node 3] Configing
+[2025-01-29 11:56:48.250] [ICEBot] [debug] [Node 4] Configing
+[2025-01-29 11:56:48.251] [ICEBot] [debug] [Node 5] Configing
+[2025-01-29 11:56:48.251] [ICEBot] [debug] [Node 6] Configing
+[2025-01-29 11:56:48.289] [ICEBot] [debug] [Node 1] Configing
+[2025-01-29 11:56:48.290] [ICEBot] [debug] [Node 2] Configing
+[2025-01-29 11:56:48.300] [ICEBot] [debug] [Node 3] Booted successfully.
+[2025-01-29 11:56:48.300] [ICEBot] [debug] [Node 4] Booted successfully.
+[2025-01-29 11:56:48.301] [ICEBot] [debug] [Node 5] Booted successfully.
+[2025-01-29 11:56:48.301] [ICEBot] [debug] [Node 6] Booted successfully.
+[2025-01-29 11:56:48.339] [ICEBot] [debug] [Node 1] Booted successfully.
+[2025-01-29 11:56:48.340] [ICEBot] [debug] [Node 2] Booted successfully.
+[2025-01-29 11:56:48.340] [ICEBot] [info] [Master] Nodes Booted Successfully
+[2025-01-29 11:56:48.351] [ICEBot] [debug] [Node 3] No fault to reset
+[2025-01-29 11:56:48.351] [ICEBot] [debug] [Node 4] No fault to reset
+[2025-01-29 11:56:48.352] [ICEBot] [debug] [Node 5] No fault to reset
+[2025-01-29 11:56:48.352] [ICEBot] [debug] [Node 6] No fault to reset
+[2025-01-29 11:56:48.389] [ICEBot] [debug] [Node 1] No fault to reset
+[2025-01-29 11:56:48.390] [ICEBot] [debug] [Node 2] No fault to reset

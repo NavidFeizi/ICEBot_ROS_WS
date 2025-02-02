@@ -3,41 +3,39 @@
  <tabbed_widget name="Main Window" parent="main_window">
   <Tab containers="1" tab_name="Joint Pos">
    <Container>
-    <DockSplitter count="4" sizes="0.216216;0.238543;0.278496;0.266745" orientation="-">
+    <DockSplitter sizes="0.216216;0.239718;0.277321;0.266745" orientation="-" count="4">
      <DockArea name="...">
-      <plot flip_x="false" style="Lines" flip_y="false" mode="TimeSeries">
-       <range top="0.100000" right="5418.428448" bottom="-0.100000" left="5163.517035"/>
+      <plot mode="TimeSeries" flip_x="false" flip_y="false" style="Lines">
+       <range bottom="-0.100000" right="1848.863297" left="795.685706" top="0.100000"/>
        <limitY/>
        <curve name="/joint_space/feedback/position[0]" color="#1f77b4"/>
-       <curve name="/joint_space/control_signal/position[0]" color="#17becf"/>
       </plot>
      </DockArea>
      <DockArea name="...">
-      <plot flip_x="false" style="Lines" flip_y="false" mode="TimeSeries">
-       <range top="0.100000" right="5418.428448" bottom="-0.100000" left="5163.517035"/>
+      <plot mode="TimeSeries" flip_x="false" flip_y="false" style="Lines">
+       <range bottom="-0.100000" right="1848.863297" left="795.685706" top="0.100000"/>
        <limitY/>
        <curve name="/joint_space/feedback/position[1]" color="#d62728"/>
-       <curve name="/joint_space/control_signal/position[1]" color="#bcbd22"/>
       </plot>
      </DockArea>
      <DockArea name="...">
-      <plot flip_x="false" style="Lines" flip_y="false" mode="TimeSeries">
-       <range top="0.001072" right="5418.428448" bottom="-0.006173" left="5163.517035"/>
+      <plot mode="TimeSeries" flip_x="false" flip_y="false" style="Lines">
+       <range bottom="-0.004456" right="1848.863297" left="795.685706" top="0.001435"/>
        <limitY/>
        <curve name="/joint_space/feedback/position[2]" color="#1ac938"/>
        <curve name="/joint_space/feedback/position[3]" color="#ff7f0e"/>
-       <curve name="/joint_space/control_signal/position[2]" color="#f14cc1"/>
-       <curve name="/joint_space/control_signal/position[3]" color="#9467bd"/>
+       <curve name="/joint_space/control_signal/position[2]" color="#17becf"/>
+       <curve name="/joint_space/control_signal/position[3]" color="#bcbd22"/>
       </plot>
      </DockArea>
      <DockArea name="...">
-      <plot flip_x="false" style="Lines" flip_y="false" mode="TimeSeries">
-       <range top="0.001103" right="5418.428448" bottom="-0.006173" left="5163.517035"/>
+      <plot mode="TimeSeries" flip_x="false" flip_y="false" style="Lines">
+       <range bottom="-0.000000" right="1848.863297" left="795.685706" top="0.000006"/>
        <limitY/>
-       <curve name="/joint_space/feedback/position[4]" color="#1f77b4"/>
-       <curve name="/joint_space/feedback/position[5]" color="#d62728"/>
-       <curve name="/joint_space/control_signal/position[4]" color="#17becf"/>
-       <curve name="/joint_space/control_signal/position[5]" color="#bcbd22"/>
+       <curve name="/joint_space/feedback/position[4]" color="#f14cc1"/>
+       <curve name="/joint_space/feedback/position[5]" color="#9467bd"/>
+       <curve name="/joint_space/control_signal/position[4]" color="#1f77b4"/>
+       <curve name="/joint_space/control_signal/position[5]" color="#d62728"/>
       </plot>
      </DockArea>
     </DockSplitter>
@@ -45,21 +43,17 @@
   </Tab>
   <Tab containers="1" tab_name="Joint Vel">
    <Container>
-    <DockSplitter count="2" sizes="0.500586;0.499414" orientation="-">
+    <DockSplitter sizes="0.500586;0.499414" orientation="-" count="2">
      <DockArea name="...">
-      <plot flip_x="false" style="Lines" flip_y="false" mode="TimeSeries">
-       <range top="0.100000" right="5418.428448" bottom="-0.100000" left="5163.517035"/>
+      <plot mode="TimeSeries" flip_x="false" flip_y="false" style="Lines">
+       <range bottom="-0.100000" right="1.000000" left="0.000000" top="0.100000"/>
        <limitY/>
-       <curve name="/joint_space/feedback/velocity[0]" color="#1f77b4"/>
-       <curve name="/joint_space/control_signal/velocity[0]" color="#1ac938"/>
       </plot>
      </DockArea>
      <DockArea name="...">
-      <plot flip_x="false" style="Lines" flip_y="false" mode="TimeSeries">
-       <range top="0.100000" right="5418.428448" bottom="-0.100000" left="5163.517035"/>
+      <plot mode="TimeSeries" flip_x="false" flip_y="false" style="Lines">
+       <range bottom="-0.100000" right="1.000000" left="0.000000" top="0.100000"/>
        <limitY/>
-       <curve name="/joint_space/feedback/velocity[1]" color="#d62728"/>
-       <curve name="/joint_space/control_signal/velocity[1]" color="#ff7f0e"/>
       </plot>
      </DockArea>
     </DockSplitter>
@@ -67,23 +61,20 @@
   </Tab>
   <Tab containers="1" tab_name="Task Space">
    <Container>
-    <DockSplitter count="2" sizes="0.500586;0.499414" orientation="-">
+    <DockSplitter sizes="0.500586;0.499414" orientation="-" count="2">
      <DockArea name="...">
-      <plot flip_x="false" style="Lines" flip_y="false" mode="TimeSeries">
-       <range top="0.060451" right="5420.416434" bottom="-0.004543" left="5410.432283"/>
+      <plot mode="TimeSeries" flip_x="false" flip_y="false" style="Lines">
+       <range bottom="-0.000909" right="1848.850469" left="1833.858431" top="0.000117"/>
        <limitY/>
-       <curve name="/task_space/feedback/p[0]" color="#1fb421"/>
-       <curve name="/task_space/feedback/p[1]" color="#b41f3c"/>
-       <curve name="/task_space/feedback/p[2]" color="#2730d6"/>
+       <curve name="/task_space/feedback/p[0]" color="#1ac938"/>
+       <curve name="/task_space/feedback/p[1]" color="#ff7f0e"/>
       </plot>
      </DockArea>
      <DockArea name="...">
-      <plot flip_x="false" style="Lines" flip_y="false" mode="TimeSeries">
-       <range top="0.035485" right="5420.416434" bottom="-0.073705" left="5410.432283"/>
+      <plot mode="TimeSeries" flip_x="false" flip_y="false" style="Lines">
+       <range bottom="0.059236" right="1848.850469" left="1833.858431" top="0.059255"/>
        <limitY/>
-       <curve name="/task_space/feedback/q[0]" color="#20c91a"/>
-       <curve name="/task_space/feedback/q[1]" color="#c91a2a"/>
-       <curve name="/task_space/feedback/q[2]" color="#2129d3"/>
+       <curve name="/task_space/feedback/p[2]" color="#f14cc1"/>
       </plot>
      </DockArea>
     </DockSplitter>
@@ -130,6 +121,7 @@
  </Plugins>
  <!-- - - - - - - - - - - - - - - -->
  <previouslyLoaded_Datafiles/>
+ <previouslyLoaded_Streamer name="ROS2 Topic Subscriber"/>
  <!-- - - - - - - - - - - - - - - -->
  <customMathEquations/>
  <snippets/>

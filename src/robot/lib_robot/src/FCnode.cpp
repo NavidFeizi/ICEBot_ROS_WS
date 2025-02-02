@@ -141,6 +141,10 @@ void FCNode::OnBoot(canopen::NmtState /*st*/, char es, const std::string &what) 
             Wait(AsyncWait(duration(std::chrono::milliseconds(50)))); // wait for other nodes to switch ON
         Wait(AsyncWait(duration(std::chrono::milliseconds(100))));    // wait for better log
 
+        // 
+        // FCNode::GetActualPosAbs(current_pos_abs);
+        // FCNode::SetHomeOffsetValue(current_pos_abs);    
+
         logger->debug("[Node " + m_node_id + "] Setting mode of operation to " + std::to_string(int8_t(OpMode::FaulhaberCommand)));
         Wait(AsyncWrite<int8_t>(MODE_OF_OPERATION_IDX, 0, static_cast<int8_t>(OpMode::FaulhaberCommand))); // Set the mode of operation
         int8_t op_mod_disp = Wait(AsyncRead<int8_t>(MODE_OF_OPERATION_DISP_IDX, 0x0000));                  // read the actual model of operation
@@ -172,9 +176,15 @@ void FCNode::OnBoot(canopen::NmtState /*st*/, char es, const std::string &what) 
             Wait(AsyncWait(duration(std::chrono::milliseconds(50)))); // wait for other nodes to enabled
         Wait(AsyncWait(duration(std::chrono::milliseconds(1000))));   // wait for a clean log
 
+        // to set the initial position as zero -> not jump after startup
+        double current_pos_abs;
+        FCNode::GetActualPosAbs(current_pos_abs);
+        FCNode::SetHomeOffsetValue(current_pos_abs);    
+        FCNode::SetTargetPos(0.0);
+    
         Post(&FCNode::TaskTargetFC, this);
         m_flags.set(Flags::FlagIndex::TASKS_POSTED, true);
-        logger->debug("[Node " + m_node_id + "] Task posted");
+        logger->debug("[Node " + m_node_id + "] Task posted"); 
     }
     else
     {

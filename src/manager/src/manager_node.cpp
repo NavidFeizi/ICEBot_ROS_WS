@@ -31,6 +31,8 @@ using namespace std::chrono_literals;
 template <typename MatrixType>
 MatrixType readFromCSV(MatrixType &Mat, const std::filesystem::path &filePath);
 
+void apply_sigmoid_smoothing(std::vector<double>& trajectory, double x1, double sample_time);
+
 std::string package_name = "manager"; // Replace with any package in your workspace
 std::string PACKAGE_SHARE_DIR = ament_index_cpp::get_package_share_directory(package_name);
 
@@ -56,11 +58,11 @@ public:
     m_filter = std::make_unique<ButterworthFilter<1>>(m_sample_time);
     m_filter->update_coeffs(f_cutoff);
 
-    m_expt_time = 100.0 + 2.0;
+    m_expt_time = 20.0 + 2.0;
     // m_expt_time = 240.0 + 2.0;
     // m_expt_time = 2.0 + 15.0;
 
-    m_trajectory_type = TargetType::JointsFile;
+    m_trajectory_type = TargetType::Dataset;
 
     switch (m_trajectory_type)
     {
@@ -98,7 +100,7 @@ public:
     case TargetType::Dataset: // from random gnerator for dataset collection
     {
       RCLCPP_INFO(this->get_logger(), "dataset collector mode");
-      int num_expt = 1;
+      int num_expt = 2;
       std::thread(&ManagerNode::dataset_expt, this, num_expt).detach();
       break;
     }
@@ -237,14 +239,15 @@ private:
   {
     m_is_experiment_running = true;
 
-    TrajectoryType traj_type = TrajectoryType::CyclicNearStep; // or TrajectoryType::LinearDecrease   - CyclycNearPulse, MultiSine
+    TrajectoryType traj_type = TrajectoryType::MultiSine; // or TrajectoryType::LinearDecrease   - CyclycNearPulse, MultiSine, CyclicNearStep
     // sample_time, num_waves , min_frequency[Hz], max_frequency[Hz] , min_amplitude, max_amplitude[m], total_samples
     MultiSineParams multiSineParams{m_sample_time, 7, 0.0, 2.0, 0.0, 0.006, m_expt_time};
+
     LinearDecreaseParams linearDecreaseParams{10.0, 50, 100, 50, 1000};
     // sample_time[s]; max_amplitude[m]; rise_duration[s]; unforced_time[s]; fall_vel[m/s]; cycle_period[s]; total_time[s];
     CyclicNearPulseParams cyclicNearPulseParams{m_sample_time, 0.005, 0.350, 1.0, 0.25, 2.0, m_expt_time};
     // sample_time[s]; max_amplitude[m]; switch_vel[m/s]; cycle_period[s]; total_time[s];
-    CyclicNearStepParams cyclicNearStepParams{m_sample_time, 0.007, 0.1, 2.0, m_expt_time};
+    CyclicNearStepParams cyclicNearStepParams{m_sample_time, 0.005, 0.1, 2.0, m_expt_time};
 
     std::unique_ptr<TrajectoryGenerator> m_signal_generator = createTrajectoryGenerator(traj_type,
                                                                                         multiSineParams,
@@ -259,10 +262,17 @@ private:
       RCLCPP_INFO(this->get_logger(), "Running experiment %d/%d", i + 1, num_expt);
       m_signal_generator->gen_trajectory();
       // m_signal_generator->flip_trajectory_sign();
-      m_traj = m_signal_generator->get_trajectory();
+      m_traj_AP = m_signal_generator->get_trajectory();
+      apply_sigmoid_smoothing(m_traj_AP, 1.0, m_sample_time);
+
+      m_signal_generator->gen_trajectory();
+      // m_signal_generator->flip_trajectory_sign();
+      m_traj_RL = m_signal_generator->get_trajectory();
+      apply_sigmoid_smoothing(m_traj_RL, 1.0, m_sample_time);
+
       ManagerNode::send_recod_request();
       m_traj_row = 0;
-      while (m_traj_row < m_traj.size())
+      while (m_traj_row < m_traj_AP.size())
       {
         wait(4);
       }
@@ -373,11 +383,14 @@ private:
     }
     case TargetType::Dataset:
     {
-      if (m_traj_row < m_traj.size())
+      if (m_traj_row < m_traj_AP.size())
       {
-        blaze::StaticVector<double, 1> x_temp = {m_traj[m_traj_row] * 1e3};
-        x_temp = m_filter->add_data_point(x_temp);
-        m_x = x_temp[0];
+        m_X[0] = {m_traj_AP[m_traj_row]};
+        m_X[1] = {m_traj_RL[m_traj_row]};
+        // x_temp = m_filter->add_data_point(x_temp);
+        // m_x = x_temp[0];
+        // m_X[0] = m_x;
+        // m_X[1] = m_x;
         ++m_traj_row;
       }
       break;
@@ -401,26 +414,26 @@ private:
     // m_X[3] = 0.0;
 
     // // To slack the antagonist tendon
-    // m_msg.position[0UL] = m_X[0];                                // insertion
-    // m_msg.position[1UL] = m_X[0] * 20;                                       // rotation
-    // m_msg.position[2UL] = (m_X[0] <= 0) ? (m_X[0]) : (0.3 * m_X[0]);       // anterior (positive is pull)
-    // m_msg.position[3UL] = (m_X[0] >= 0) ? (-1 * m_X[0]) : (-0.3 * m_X[0]); // posterior (positive is pull)
-    // m_msg.position[4UL] = (m_X[1] <= 0) ? (m_X[1]) : (0.3 * m_X[1]);       // right
-    // m_msg.position[3UL] = (m_X[1] >= 0) ? (-1 * m_X[1]) : (-0.3 * m_X[1]); // left
+    m_msg.position[0UL] = 0.0;                                               // insertion
+    m_msg.position[1UL] = 0.0;                                               // rotation
+    m_msg.position[2UL] = (m_X[0] <= 0) ? (m_X[0]) : (0.3 * m_X[0]);         // anterior (positive is pull)
+    m_msg.position[3UL] = (m_X[0] >= 0) ? (-1.0 * m_X[0]) : (-0.3 * m_X[0]); // posterior (positive is pull)
+    m_msg.position[4UL] = (m_X[1] <= 0) ? (m_X[1]) : (0.3 * m_X[1]);         // right
+    m_msg.position[5UL] = (m_X[1] >= 0) ? (-1.0 * m_X[1]) : (-0.3 * m_X[1]); // left
 
-    m_msg.position[0UL] = 0.0; // insertion
-    m_msg.position[1UL] = 0.0;        // rotation
-    m_msg.position[2UL] = -1*m_X[0];           // anterior (positive is pull)
-    m_msg.position[3UL] = -1*m_X[1];           // posterior (positive is pull)
-    m_msg.position[4UL] = -1*m_X[2];           // right
-    m_msg.position[5UL] = -1*m_X[3];           // left
+    // m_msg.position[0UL] = 0.0; // insertion
+    // m_msg.position[1UL] = 0.0;        // rotation
+    // m_msg.position[2UL] = -1*m_X[0];           // anterior (positive is pull)
+    // m_msg.position[3UL] = -1*m_X[1];           // posterior (positive is pull)
+    // m_msg.position[4UL] = -1*m_X[2];           // right
+    // m_msg.position[5UL] = -1*m_X[3];           // left
 
-    m_msg.velocity[0UL] = 0.0 * 1e-3;  // insertion
-    m_msg.velocity[1UL] = 0.0;         // rotation
-    m_msg.velocity[2UL] = 0.0 * 1e-3;  // anterior (positive is pull)
+    m_msg.velocity[0UL] = 0.0 * 1e-3; // insertion
+    m_msg.velocity[1UL] = 0.0;        // rotation
+    m_msg.velocity[2UL] = 0.0 * 1e-3; // anterior (positive is pull)
     m_msg.velocity[3UL] = 0.0 * 1e-3; // posterior (positive is pull)
-    m_msg.velocity[4UL] = 0.0 * 1e-3;  // right
-    m_msg.velocity[5UL] = 0.0 * 1e-3;  // left
+    m_msg.velocity[4UL] = 0.0 * 1e-3; // right
+    m_msg.velocity[5UL] = 0.0 * 1e-3; // left
 
     // if (m_t>= 0 && m_t<22.0)
     // {
@@ -456,15 +469,15 @@ private:
 
     // for RAL
     double frequency = 0.2;
-    double amplitude = 0.006;
+    double amplitude = -0.005;
 
-    if (t >= 1 && t < m_expt_time - 1.0)
+    if (t >= 2 && t < m_expt_time - 2.0)
     {
       // for RAL
       //  x = amplitude * (0.0 + 1.0 * (std::sin(2 * M_PI * 1.0 * (t - 1))));
 
       // // for RAL
-      x = amplitude * (0.5 + 0.5 * (std::sin(2 * M_PI * frequency * 1 / 1 * (t - 1))));
+      x = amplitude * (0.0 + 1.0 * (std::sin(2 * M_PI * frequency * 1 / 1 * (t - 2))));
       // x += amplitude * (0.0 + 0.3 * (std::sin(2 * M_PI * frequency * 1 / 3 * (t - 1))));
       // x += amplitude * (0.0 + 0.2 * (std::sin(2 * M_PI * frequency * 1 / 1 * (t - 1))));
 
@@ -585,7 +598,7 @@ private:
   bool m_task_space_mode;
   TargetType m_trajectory_type;
 
-  std::vector<double> m_traj;
+  std::vector<double> m_traj_AP, m_traj_RL;
   long unsigned int m_traj_row = 1;
   blaze::HybridMatrix<double, 60000UL, 5UL> m_joints_trajectory; // time, T1,T2,T3,T4
   blaze::HybridMatrix<double, 60000UL, 5UL> m_task_trajectory;
@@ -615,6 +628,41 @@ int main(int argc, char *argv[])
   rclcpp::shutdown();
   return 0;
 }
+
+// Sigmoid function
+double sigmoid(double x) {
+    return 1.0 / (1.0 + std::exp(-x));
+}
+
+// Function to apply sigmoid smoothing
+void apply_sigmoid_smoothing(std::vector<double>& trajectory, double x1, double sample_time) {
+    int size = trajectory.size();
+    if (size < 2) return;
+
+    // Number of points to smooth based on x1 and sample time
+    int smooth_points = static_cast<int>(x1 / sample_time);
+    if (smooth_points <= 0 || smooth_points * 2 >= size) {
+        std::cerr << "Smoothing region is too large or too small for the trajectory size." << std::endl;
+        return;
+    }
+
+    double scaling_factor = 6.0;  // Controls sigmoid steepness
+
+    // Apply sigmoid at the beginning
+    for (int i = 0; i < smooth_points; ++i) {
+        double normalized_index = static_cast<double>(i) / smooth_points;
+        double sigmoid_value = sigmoid(scaling_factor * (normalized_index - 0.5));
+        trajectory[i] *= sigmoid_value;
+    }
+
+    // Apply flipped sigmoid at the end
+    for (int i = size - smooth_points; i < size; ++i) {
+        double normalized_index = static_cast<double>(i - (size - smooth_points)) / smooth_points;
+        double sigmoid_value = sigmoid(scaling_factor * (0.5 - normalized_index));
+        trajectory[i] *= sigmoid_value;
+    }
+}
+
 
 // function that reads data from CSV files
 template <typename MatrixType>

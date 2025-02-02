@@ -47,7 +47,7 @@ private:
       m_ki_vec[i] = m_ki[i];
     }
 
-    m_home_pre_tension = 1.0; //[mm]
+    m_home_pre_tension = 2.0; //[mm]
   }
 
   // Setup and initialize the robot
