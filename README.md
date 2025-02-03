@@ -86,7 +86,7 @@ To set up the CANopen connection, follow these steps:
    can0  000   [2]  82 00
    ```
 
-### Setup EMtracker USB Connection
+### Setup EM Tracker USB Connection
 
 1. **Identify connected USB ports:**
    ```bash
@@ -106,28 +106,40 @@ To set up the CANopen connection, follow these steps:
 
 1. **Isolate CPU cores:**
 
-   First isolate CPU cores through GRUB config. Open the GRUB configuration file:
+   First, isolate CPU cores through GRUB config. This is essential for the real-time performance of the ROS2 nodes. Otherwise, the timers of the ROS2 nodes may not work with the exact period. The configuration below should be done only once.
+   
+   Open the GRUB configuration file:
 
    ```bash
    sudo nano /etc/default/grub
    ```
-   Find the line starting with `GRUB_CMDLINE_LINUX_DEFAULT`, and add the following kernel parameters as needed:
+   Find the line starting with `GRUB_CMDLINE_LINUX_DEFAULT`, and add the following kernel parameters as needed (double check the CPU cores with the settings in the launch files). Avoide isolating CPU0 as it is used for OS applications
 
-   `isolcpus=0,1`: Isolates cores 0 and 1 from normal OS scheduling.
+   `isolcpus=4,5,6,7`: Isolates cores 0 and 1 from normal OS scheduling.
 
-   `nohz_full=0,1`: Enables "no tick" mode, which reduces kernel interruptions on these cores.
+   `nohz_full=4,5,6,7`: Enables "no tick" mode, which reduces kernel interruptions on these cores.
 
-   `rcu_nocbs=0,1`: Moves RCU (Read-Copy-Update) callbacks off these cores to prevent kernel delays.
+   `rcu_nocbs=4,5,6,7`: Moves RCU (Read-Copy-Update) callbacks off these cores to prevent kernel delays.
 
+   Below is an example:
    ```bash
    GRUB_CMDLINE_LINUX_DEFAULT="quiet splash isolcpus=0,1 nohz_full=0,1 rcu_nocbs=0,1"
    ```
 
-2. **Run on specific cores:**
+   After saving the GRUB config, update it.
    ```bash
-   taskset -c 0,1 ros2 run catheter_sim_koopman_cpp simulator
+   sudo update-grub
    ```
-   Note: `taskset` can also be included in the launch file.
+
+   Reboot for the GRUB changes to take effect.
+
+
+2. **Run on specific cores:**
+   example of executing on CPU4 and CPU5
+   ```bash
+   taskset -c 4,5 ros2 run catheter_sim_koopman_cpp simulator
+   ```
+   Note: `taskset` is also included in the launch file, so if you use the launch file to execute, there is no need to set the CPU affinity manually.
 
 3. **Triger robot homing service:**
    ```bash
