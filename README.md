@@ -104,16 +104,21 @@ To set up the CANopen connection, follow these steps:
 
 ## Running the Nodes
 
-1. **Isolate CPU cores:**\\
-   first isolate CPU cores through GRUB config:
-   Open the GRUB configuration file:
+1. **Isolate CPU cores:**
+
+   First isolate CPU cores through GRUB config. Open the GRUB configuration file:
+
    ```bash
    sudo nano /etc/default/grub
    ```
    Find the line starting with `GRUB_CMDLINE_LINUX_DEFAULT`, and add the following kernel parameters as needed:
+
    `isolcpus=0,1`: Isolates cores 0 and 1 from normal OS scheduling.
+
    `nohz_full=0,1`: Enables "no tick" mode, which reduces kernel interruptions on these cores.
+
    `rcu_nocbs=0,1`: Moves RCU (Read-Copy-Update) callbacks off these cores to prevent kernel delays.
+
    ```bash
    GRUB_CMDLINE_LINUX_DEFAULT="quiet splash isolcpus=0,1 nohz_full=0,1 rcu_nocbs=0,1"
    ```
