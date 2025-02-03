@@ -104,7 +104,7 @@ To set up the CANopen connection, follow these steps:
 
 ## Running the Nodes
 
-1. **Isolate CPU cores:**
+1. **Isolate CPU cores:**\\
    first isolate CPU cores through GRUB config:
    Open the GRUB configuration file:
    ```bash
