@@ -40,8 +40,8 @@ private:
   // Function to declare and initialize parameters - parameters values should be set from the launch file
   void declare_parameters()
   {
-    declare_parameter<double>("sample_time", 8E-3);
-    declare_parameter<int>("task_period_factor", 2);
+    declare_parameter<double>("sample_time", 4E-3);
+    declare_parameter<int>("task_period_factor", 4);
     m_sample_time = get_parameter("sample_time").as_double();
     m_task_period_factor = get_parameter("task_period_factor").as_int();
   }

@@ -99,8 +99,8 @@ public:
     }
     case TargetType::Dataset: // from random gnerator for dataset collection
     {
+      int num_expt = 6;
       RCLCPP_INFO(this->get_logger(), "dataset collector mode");
-      int num_expt = 5;
       std::thread(&ManagerNode::dataset_expt, this, num_expt).detach();
       break;
     }
@@ -226,7 +226,7 @@ private:
     auto response = future.get();
     if (response->success)
     {
-      RCLCPP_INFO(this->get_logger(), "%s", response->message.c_str());
+      // RCLCPP_INFO(this->get_logger(), "%s", response->message.c_str());
     }
     else
     {
@@ -241,7 +241,7 @@ private:
 
     TrajectoryType traj_type = TrajectoryType::MultiSine; // or TrajectoryType::LinearDecrease   - CyclycNearPulse, MultiSine, CyclicNearStep
     // sample_time, num_waves , min_frequency[Hz], max_frequency[Hz] , min_amplitude, max_amplitude[m], total_samples
-    MultiSineParams multiSineParams{m_sample_time, 5, 0.0, 0.5, 0.0000, 0.006, m_expt_time};
+    MultiSineParams multiSineParams{m_sample_time, 7, 0.0, 1.5, 0.002, 0.006, m_expt_time};
 
     LinearDecreaseParams linearDecreaseParams{10.0, 50, 100, 50, 1000};
     // sample_time[s]; max_amplitude[m]; rise_duration[s]; unforced_time[s]; fall_vel[m/s]; cycle_period[s]; total_time[s];

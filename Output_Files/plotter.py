@@ -1,6 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib
+from matplotlib import rc
+from matplotlib.gridspec import GridSpec
+from matplotlib.ticker import ScalarFormatter
 import os
 from scipy.signal import savgol_filter
 from scipy.interpolate import CubicSpline
@@ -11,7 +14,7 @@ plt.rcParams["grid.linewidth"] = 0.5
 matplotlib.rc("font", family="serif", size=7)
 matplotlib.rcParams["text.usetex"] = True
 
-folderName = "2025-02-02_18-43-45";
+folderName = "2025-02-03_13-50-29";
 
 def main():
     # Read data from csv file
@@ -35,7 +38,10 @@ def main():
     tip_pos_ts = EMT_data[:, 0:4] 
     tip_pos_targ = EMT_data[:, 13:16] 
 
-    Force = FT_data[:, 1:4] 
+    # Force = FT_data[:, 1:4] 
+
+    joints_sample_time = np.diff(t_joints)*1e3
+    task_sample_time = np.diff(t_task)*1e3
 
     joint_pos_ts = np.concatenate((np.expand_dims(t_joints,1), joint_pos), axis = 1)
     dataset_duration = t_joints[-1] - t_joints[0]
@@ -73,55 +79,79 @@ def main():
     # data_df = pd.DataFrame(data, columns=headers)
     # data_df.to_csv(output_file, index=False, float_format='%.8f')
 
-    # Create a 3D scatter plot
-    column = 2;
-    fig, ax = plt.subplots(3, 1, figsize=(14, 7))
+    fig = plt.figure(figsize=(14, 7))
+    gs = GridSpec(4, 4, figure=fig, height_ratios=[1, 1, 1, 1])
+    axs = []
+    axs.append(fig.add_subplot(gs[0, 0:4]))
+    axs.append(fig.add_subplot(gs[1, 0:4]))
+    axs.append(fig.add_subplot(gs[2, 0:4]))
+    axs.append(fig.add_subplot(gs[3, 0]))
+    axs.append(fig.add_subplot(gs[3, 1]))
+    # axs.append(fig.add_subplot(gs[3, 2]))
 
-    ax[1].set_title("Tip position")
-    ax[0].plot(t_task, tip_pos[:,0]*1E3, c="r", label="X", linewidth=1.0)  # Scatter plot with red circles
-    ax[0].plot(t_task, tip_pos[:,1]*1E3, c="g", label="Y", linewidth=1.0)  # Scatter plot with red circles
-    ax[0].plot(t_task, tip_pos[:,2]*1E3, c="b", label="Z", linewidth=1.0)  # Scatter plot with red circles
-    # ax[0].plot(t_task, tip_pos_targ[:,0]*1E3, c="r", label="X", linewidth=1.5, linestyle="--")  # Scatter plot with red circles
-    # ax[0].plot(t_task, tip_pos_targ[:,1]*1E3, c="b", label="Y", linewidth=1.5, linestyle="--")  # Scatter plot with red circles
-    # ax[0].plot(t_task, tip_pos_targ[:,2]*1E3, c="g", label="Z", linewidth=1.5, linestyle="--")  # Scatter plot with red circles
-    # ax[0].plot(resample_t, tip_pos_interp[:,0]*1E3, c="r", label="X", linewidth=1.5, linestyle="--")  # Scatter plot with red circles
-    # ax[0].plot(resample_t, tip_pos_interp[:,1]*1E3, c="b", label="Y", linewidth=1.5, linestyle="--")  # Scatter plot with red circles
-    # ax[0].plot(resample_t, tip_pos_interp[:,2]*1E3, c="g", label="Z", linewidth=1.5, linestyle="--")  # Scatter plot with red circles
-    ax[0].set_ylabel("$\mathrm{tip}$ [mm]")
-    ax[0].minorticks_on()
-    ax[0].grid(which="both", color="lightgray", linestyle="--", linewidth=0.5)
-    ax[0].legend()
+    axs[1].set_title("Tip position")
+    axs[0].plot(t_task, tip_pos[:,0]*1E3, c="r", label="X", linewidth=1.0)  # Scatter plot with red circles
+    axs[0].plot(t_task, tip_pos[:,1]*1E3, c="g", label="Y", linewidth=1.0)  # Scatter plot with red circles
+    axs[0].plot(t_task, tip_pos[:,2]*1E3, c="b", label="Z", linewidth=1.0)  # Scatter plot with red circles
+    # axs[0].plot(t_task, tip_pos_targ[:,0]*1E3, c="r", label="X", linewidth=1.5, linestyle="--")  # Scatter plot with red circles
+    # axs[0].plot(t_task, tip_pos_targ[:,1]*1E3, c="b", label="Y", linewidth=1.5, linestyle="--")  # Scatter plot with red circles
+    # axs[0].plot(t_task, tip_pos_targ[:,2]*1E3, c="g", label="Z", linewidth=1.5, linestyle="--")  # Scatter plot with red circles
+    # axs[0].plot(resample_t, tip_pos_interp[:,0]*1E3, c="r", label="X", linewidth=1.5, linestyle="--")  # Scatter plot with red circles
+    # axs[0].plot(resample_t, tip_pos_interp[:,1]*1E3, c="b", label="Y", linewidth=1.5, linestyle="--")  # Scatter plot with red circles
+    # axs[0].plot(resample_t, tip_pos_interp[:,2]*1E3, c="g", label="Z", linewidth=1.5, linestyle="--")  # Scatter plot with red circles
+    axs[0].set_ylabel("$\mathrm{tip}$ [mm]")
+    axs[0].minorticks_on()
+    axs[0].grid(which="both", color="lightgray", linestyle="--", linewidth=0.5)
+    axs[0].legend()
 
-    ax[1].set_title("Tendon position - Positive is pulling")
-    # ax[1].plot(t, q[:, column]*1e3, c="black", label="q", linewidth=1.0)  # Scatter plot with red circles
-    ax[1].plot(t_joints, joint_pos[:, 2]*1e3, c="black", label="T_1", linewidth=1.0, linestyle="-")  # Scatter plot with red circles
-    ax[1].plot(t_joints, joint_pos[:, 3]*1e3, c="blue", label="T_3", linewidth=1.0, linestyle="-")  # Scatter plot with red circles
-    ax[1].plot(t_joints, joint_pos[:, 4]*1e3, c="red", label="T_2", linewidth=1.0, linestyle="-")  # Scatter plot with red circles
-    ax[1].plot(t_joints, joint_pos[:, 5]*1e3, c="green", label="T_4", linewidth=1.0, linestyle="-")  # Scatter plot with red circles
+    axs[1].set_title("Tendon position - Positive is pulling")
+    # axs[1].plot(t, q[:, column]*1e3, c="black", label="q", linewidth=1.0)  # Scatter plot with red circles
+    axs[1].plot(t_joints, joint_pos[:, 2]*1e3, c="black", label="T_1", linewidth=1.0, linestyle="-")  # Scatter plot with red circles
+    axs[1].plot(t_joints, joint_pos[:, 3]*1e3, c="blue", label="T_3", linewidth=1.0, linestyle="-")  # Scatter plot with red circles
+    axs[1].plot(t_joints, joint_pos[:, 4]*1e3, c="red", label="T_2", linewidth=1.0, linestyle="-")  # Scatter plot with red circles
+    axs[1].plot(t_joints, joint_pos[:, 5]*1e3, c="green", label="T_4", linewidth=1.0, linestyle="-")  # Scatter plot with red circles
 
-    ax[1].plot(t_joints, q[:, 2]*1e3, c="black", label="T_{1t}", linewidth=0.75, linestyle="--")  # Scatter plot with red circles
-    ax[1].plot(t_joints, q[:, 3]*1e3, c="blue", label="T_{3t}", linewidth=0.75, linestyle="--")  # Scatter plot with red circles
-    ax[1].plot(t_joints, q[:, 4]*1e3, c="red", label="T_{2t}", linewidth=0.75, linestyle="--")  # Scatter plot with red circles
-    ax[1].plot(t_joints, q[:, 5]*1e3, c="green", label="T_{4t}", linewidth=0.75, linestyle="--")  # Scatter plot with red circles
+    axs[1].plot(t_joints, q[:, 2]*1e3, c="black", label="T_{1t}", linewidth=0.75, linestyle="--")  # Scatter plot with red circles
+    axs[1].plot(t_joints, q[:, 3]*1e3, c="blue", label="T_{3t}", linewidth=0.75, linestyle="--")  # Scatter plot with red circles
+    axs[1].plot(t_joints, q[:, 4]*1e3, c="red", label="T_{2t}", linewidth=0.75, linestyle="--")  # Scatter plot with red circles
+    axs[1].plot(t_joints, q[:, 5]*1e3, c="green", label="T_{4t}", linewidth=0.75, linestyle="--")  # Scatter plot with red circles
 
     # ax[1].plot(resample_t, joint_pos_interp[:, column]*1e3, c="red", label="pos_res", linewidth=1.5, linestyle="--")  # Scatter plot with red circles
     # ax[1].plot(t, joint_pos_targ[:, column]*1e3, c="red", label="ref", linewidth=1.5, linestyle=":")  # Scatter plot with red circles
-    ax[1].set_ylabel("$\mathrm{joint}$ [mm]")
-    ax[1].minorticks_on()
-    ax[1].grid(which="both", color="lightgray", linestyle="--", linewidth=0.5)
-    ax[1].legend(loc="best")
+    axs[1].set_ylabel("$\mathrm{joint}$ [mm]")
+    axs[1].minorticks_on()
+    axs[1].grid(which="both", color="lightgray", linestyle="--", linewidth=0.5)
+    axs[1].legend(loc="best")
 
-    ax[2].set_title("Tendon velocity - Positive is pulling")
-    # ax[2].plot(t, q_dot[:, column] * 1e3, c="cyan", label="$\dot{q}$", linewidth=1.0)  # Position plot
-    ax[2].plot(t_joints, joint_velocity[:, 2] * 1e3, c="black", label="T_1", linewidth=1.0, linestyle="-")  # Position plot
-    ax[2].plot(t_joints, joint_velocity[:, 3] * 1e3, c="blue", label="T_3", linewidth=1.0, linestyle="-")  # Position plot
-    ax[2].plot(t_joints, joint_velocity[:, 4] * 1e3, c="red", label="T_2", linewidth=1.0, linestyle="-")  # Position plot
-    ax[2].plot(t_joints, joint_velocity[:, 5] * 1e3, c="green", label="T_4", linewidth=1.0, linestyle="-")  # Position plot
-    ax[2].set_ylabel("$\mathrm{joint}$ [mm/s]")
-    ax[2].minorticks_on()
-    ax[2].grid(which="both", color="lightgray", linestyle="--", linewidth=0.5)
-    ax[2].legend(loc="best")
-    ax[2].set_xlabel("$\mathrm{Time}$ [s]")
+    axs[2].set_title("Tendon velocity - Positive is pulling")
+    # axs[2].plot(t, q_dot[:, column] * 1e3, c="cyan", label="$\dot{q}$", linewidth=1.0)  # Position plot
+    axs[2].plot(t_joints, joint_velocity[:, 2] * 1e3, c="black", label="T_1", linewidth=1.0, linestyle="-")  # Position plot
+    axs[2].plot(t_joints, joint_velocity[:, 3] * 1e3, c="blue", label="T_3", linewidth=1.0, linestyle="-")  # Position plot
+    axs[2].plot(t_joints, joint_velocity[:, 4] * 1e3, c="red", label="T_2", linewidth=1.0, linestyle="-")  # Position plot
+    axs[2].plot(t_joints, joint_velocity[:, 5] * 1e3, c="green", label="T_4", linewidth=1.0, linestyle="-")  # Position plot
+    axs[2].set_ylabel("$\mathrm{joint}$ [mm/s]")
+    axs[2].minorticks_on()
+    axs[2].grid(which="both", color="lightgray", linestyle="--", linewidth=0.5)
+    axs[2].legend(loc="best")
+    axs[2].set_xlabel("$\mathrm{Time}$ [s]")
+
+    axs[3].set_title("Distribution of sample times [ms]")
+    axs[3].boxplot([joints_sample_time], labels=['Joints Sample Time'], patch_artist=True, whis=[0, 100])
+    axs[3].set_ylabel("Sample Time [ms]")
+    axs[3].minorticks_on()
+    axs[3].grid(which="both", color="lightgray", linestyle="--", linewidth=0.5)
+    axs[3].legend(loc="best")
+    # axs[3].yaxis.set_major_formatter(ScalarFormatter(useOffset=False))
+    # axs[3].ticklabel_format(style='plain', axis='y')  # Ensure non-scientific notation
+
+    axs[4].set_title("Distribution of sample times [ms]")
+    axs[4].boxplot([task_sample_time], labels=['Task Sample Time'], patch_artist=True, whis=[0, 100])
+    axs[4].set_ylabel("Sample Time [ms]")
+    axs[4].minorticks_on()
+    axs[4].grid(which="both", color="lightgray", linestyle="--", linewidth=0.5)
+    axs[4].legend(loc="best")
+    # axs[4].yaxis.set_major_formatter(ScalarFormatter(useOffset=False))
+    # axs[4].ticklabel_format(style='plain', axis='y')  # Ensure non-scientific notation
 
 
     # ax[2].plot(t, current[:,column]*1e3, c="b", label="Current", linewidth=1)  # Scatter plot with red circles

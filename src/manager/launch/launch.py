@@ -6,7 +6,7 @@ def generate_launch_description():
 
     manager_node = ExecuteProcess(
         cmd=[
-            'taskset', '-c', '3',  # This sets the affinity to CPU core 1
+            'taskset', '-c', '6',  # This sets the affinity to CPU core 2
             'ros2', 'run', 'manager', 'manage',
             '--ros-args',
             '-p', 'sample_time:=0.004',  
@@ -18,7 +18,7 @@ def generate_launch_description():
 
     task_target_sim_node = ExecuteProcess(
         cmd=[
-            'taskset', '-c', '1',  # This sets the affinity to CPU core 1
+            'taskset', '-c', '8',  # This sets the affinity to CPU core 4
             'ros2', 'run', 'manager', 'simulator_koopman',
             '--ros-args',
             '-p', 'sample_time:=0.002', 
@@ -29,10 +29,10 @@ def generate_launch_description():
 
     recorder_node = ExecuteProcess(
         cmd=[
-            'taskset', '-c', '3',  # This sets the affinity to CPU core 1
+            'taskset', '-c', '7',  # This sets the affinity to CPU core 3
             'ros2', 'run', 'manager', 'record',
             '--ros-args',
-            '-p', 'sample_time:=0.008',  
+            '-p', 'sample_time:=0.004',  
             '--remap', '__node:=Recorder_node'
         ],
         output='screen',
