@@ -11,7 +11,7 @@ plt.rcParams["grid.linewidth"] = 0.5
 matplotlib.rc("font", family="serif", size=7)
 matplotlib.rcParams["text.usetex"] = True
 
-folderName = "2025-02-02_16-07-51";
+folderName = "2025-02-02_18-43-45";
 
 def main():
     # Read data from csv file
