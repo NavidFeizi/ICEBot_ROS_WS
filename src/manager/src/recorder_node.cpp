@@ -40,8 +40,8 @@ private:
   // Function to declare and initialize parameters - parameters values should be set from the launch file
   void declare_parameters()
   {
-    declare_parameter<double>("sample_time", 4E-3);
-    declare_parameter<int>("task_period_factor", 4);
+    declare_parameter<double>("sample_time", 8E-3);
+    declare_parameter<int>("task_period_factor", 2);
     m_sample_time = get_parameter("sample_time").as_double();
     m_task_period_factor = get_parameter("task_period_factor").as_int();
   }
@@ -272,12 +272,12 @@ private:
                         << m_joint_space_target_pos[0] << ',' << m_joint_space_target_pos[1] << ',' << m_joint_space_target_pos[2] << ',' << m_joint_space_target_pos[3] << ',' << m_joint_space_target_pos[4] << ',' << m_joint_space_target_pos[5] << ','
                         << m_joint_space_target_pos[0] << ',' << m_joint_space_target_pos[1] << ',' << m_joint_space_target_pos[2] << ',' << m_joint_space_target_pos[3] << ',' << m_joint_space_target_pos[4] << ',' << m_joint_space_target_pos[5] << '\n';
 
-      m_ft_sensor_dump_file << std::fixed << std::setprecision(3)
-                            << time << ","
-                            << std::setprecision(2)
-                            << m_force_torque[0] << ',' << m_force_torque[1] << ',' << m_force_torque[2] << ','
-                            << std::setprecision(4)
-                            << m_force_torque[3] << ',' << m_force_torque[4] << ',' << m_force_torque[5] << '\n';
+      // m_ft_sensor_dump_file << std::fixed << std::setprecision(3)
+      //                       << time << ","
+      //                       << std::setprecision(2)
+      //                       << m_force_torque[0] << ',' << m_force_torque[1] << ',' << m_force_torque[2] << ','
+      //                       << std::setprecision(4)
+      //                       << m_force_torque[3] << ',' << m_force_torque[4] << ',' << m_force_torque[5] << '\n';
 
       if (m_counter % m_task_period_factor == 0)
       {

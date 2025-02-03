@@ -52,7 +52,7 @@ public:
   {
     ManagerNode::declare_parameters();
     ManagerNode::setup_ros_interfaces();
-    ManagerNode::create_dump_files();
+    // ManagerNode::create_dump_files();
 
     double f_cutoff = 20.0;
     m_filter = std::make_unique<ButterworthFilter<1>>(m_sample_time);
@@ -100,7 +100,7 @@ public:
     case TargetType::Dataset: // from random gnerator for dataset collection
     {
       RCLCPP_INFO(this->get_logger(), "dataset collector mode");
-      int num_expt = 2;
+      int num_expt = 5;
       std::thread(&ManagerNode::dataset_expt, this, num_expt).detach();
       break;
     }
@@ -241,7 +241,7 @@ private:
 
     TrajectoryType traj_type = TrajectoryType::MultiSine; // or TrajectoryType::LinearDecrease   - CyclycNearPulse, MultiSine, CyclicNearStep
     // sample_time, num_waves , min_frequency[Hz], max_frequency[Hz] , min_amplitude, max_amplitude[m], total_samples
-    MultiSineParams multiSineParams{m_sample_time, 7, 0.0, 2.0, 0.0, 0.006, m_expt_time};
+    MultiSineParams multiSineParams{m_sample_time, 5, 0.0, 0.5, 0.0000, 0.006, m_expt_time};
 
     LinearDecreaseParams linearDecreaseParams{10.0, 50, 100, 50, 1000};
     // sample_time[s]; max_amplitude[m]; rise_duration[s]; unforced_time[s]; fall_vel[m/s]; cycle_period[s]; total_time[s];
@@ -257,6 +257,8 @@ private:
 
     RCLCPP_INFO(this->get_logger(), "Dataset collecting experiment started");
 
+    wait(2000);
+    m_traj_row = 0;
     for (int i = 0; i < num_expt; ++i)
     {
       RCLCPP_INFO(this->get_logger(), "Running experiment %d/%d", i + 1, num_expt);
@@ -435,13 +437,13 @@ private:
     m_msg.velocity[4UL] = 0.0 * 1e-3; // right
     m_msg.velocity[5UL] = 0.0 * 1e-3; // left
 
-    // if (m_t>= 0 && m_t<22.0)
-    // {
-    m_manager_dump_file << std::fixed << std::setprecision(3)
-                        << m_t << ","
-                        << std::fixed << std::setprecision(7)
-                        << m_msg.position[0] << ',' << m_msg.position[1] << ',' << m_msg.position[2] << ',' << m_msg.position[3] << ',' << m_msg.position[4] << ',' << m_msg.position[5] << '\n';
-    // }
+    // // if (m_t>= 0 && m_t<22.0)
+    // // {
+    // m_manager_dump_file << std::fixed << std::setprecision(3)
+    //                     << m_t << ","
+    //                     << std::fixed << std::setprecision(7)
+    //                     << m_msg.position[0] << ',' << m_msg.position[1] << ',' << m_msg.position[2] << ',' << m_msg.position[3] << ',' << m_msg.position[4] << ',' << m_msg.position[5] << '\n';
+    // // }
 
     if (m_task_space_mode)
     {
@@ -646,7 +648,7 @@ void apply_sigmoid_smoothing(std::vector<double>& trajectory, double x1, double 
         return;
     }
 
-    double scaling_factor = 6.0;  // Controls sigmoid steepness
+    double scaling_factor = 10.0;  // Controls sigmoid steepness
 
     // Apply sigmoid at the beginning
     for (int i = 0; i < smooth_points; ++i) {

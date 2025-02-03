@@ -104,18 +104,32 @@ To set up the CANopen connection, follow these steps:
 
 ## Running the Nodes
 
-1. **Run on specific cores:**
+1. **Isolate CPU cores:**
+   first isolate CPU cores through GRUB config:
+   Open the GRUB configuration file:
+   ```bash
+   sudo nano /etc/default/grub
+   ```
+   Find the line starting with `GRUB_CMDLINE_LINUX_DEFAULT`, and add the following kernel parameters as needed:
+   `isolcpus=0,1`: Isolates cores 0 and 1 from normal OS scheduling.
+   `nohz_full=0,1`: Enables "no tick" mode, which reduces kernel interruptions on these cores.
+   `rcu_nocbs=0,1`: Moves RCU (Read-Copy-Update) callbacks off these cores to prevent kernel delays.
+   ```bash
+   GRUB_CMDLINE_LINUX_DEFAULT="quiet splash isolcpus=0,1 nohz_full=0,1 rcu_nocbs=0,1"
+   ```
+
+2. **Run on specific cores:**
    ```bash
    taskset -c 0,1 ros2 run catheter_sim_koopman_cpp simulator
    ```
    Note: `taskset` can also be included in the launch file.
 
-2. **Triger robot homing service:**
+3. **Triger robot homing service:**
    ```bash
    ros2 service call /homing std_srvs/srv/Trigger
    ```
 
-3. **Set parameters:**
+4. **Set parameters:**
    ```bash
    ros2 param set control_node Q "[0.7, 0.0, 0.0, 0.0]"
    ros2 param set control_node R "[5.0e-4]"

@@ -32,7 +32,7 @@ def generate_launch_description():
             'taskset', '-c', '3',  # This sets the affinity to CPU core 1
             'ros2', 'run', 'manager', 'record',
             '--ros-args',
-            '-p', 'sample_time:=0.004',  
+            '-p', 'sample_time:=0.008',  
             '--remap', '__node:=Recorder_node'
         ],
         output='screen',
